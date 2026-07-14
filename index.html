@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Borbás Webdesign | Prémium Egyedi Weboldalak & Grafika</title>
+    <meta name="description" content="Egyedi, prémium minőségű weboldalak tervezése és fejlesztése. Borbás Webdesign – Lenyűgöző megjelenés, elképesztő sebesség és keresőoptimalizált kód.">
+    <meta name="keywords" content="webdesign, webfejlesztés, egyedi weboldal, responsive weboldal, SEO, UI/UX design, Borbás Webdesign">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://borbaswebdesign.hu/">
+    <meta property="og:title" content="Borbás Webdesign | Prémium Egyedi Weboldalak & Grafika">
+    <meta property="og:description" content="Egyedi, prémium minőségű weboldalak tervezése és fejlesztése elképesztő sebességgel és keresőoptimalizált kóddal.">
+    
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- INTERACTIVE BACKGROUND CANVAS -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Global SVG Gradients definitions -->
+    <svg style="display: none;">
+        <defs>
+            <linearGradient id="neon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8b5cf6" />
+                <stop offset="100%" stop-color="#06b6d4" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- AMBIENT BACKGROUND GLOWS -->
+    <div class="glow-bg-container">
+        <div class="glow-orb glow-1"></div>
+        <div class="glow-orb glow-2"></div>
+        <div class="glow-orb glow-3"></div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#hero" class="logo" id="logo-link">
+                <span>Borbás</span>Webdesign<div class="logo-dot"></div>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#hero" class="nav-link active">Főoldal</a></li>
+                    <li><a href="#szolgaltatasok" class="nav-link">Szolgáltatások</a></li>
+                    <li><a href="#referenciak" class="nav-link">Referenciák</a></li>
+                    <li><a href="#folyamat" class="nav-link">Hogyan dolgozom?</a></li>
+                    <li><a href="#kalkulator" class="nav-link">Árkalkulátor</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-cta">
+                <button class="btn-primary trigger-contact" id="nav-cta-btn">Kapcsolat <span class="arrow">→</span></button>
+                <div class="mobile-nav-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-text-wrap">
+                    <span class="badge">Elérhető egyedi projektekre</span>
+                    <h1>Digitális élmények, amelyek <span class="italic-text">lenyűgözik</span> a látogatókat és <span class="gradient-text">eladják</span> a terméked</h1>
+                    <p>Modern, villámgyors és keresőoptimalizált (SEO) weboldalak készítése egyedi dizájnnal és animációkkal.</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary trigger-contact" id="hero-primary-cta">Kérj ajánlatot <span class="arrow">→</span></button>
+                        <a href="#kalkulator" class="btn-secondary" id="hero-secondary-cta">Árkalkulátor <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <div class="hero-visual-wrap">
+                    <div class="hero-image-wrapper-outer">
+                        <div class="hero-image-container">
+                            <div class="hero-image-glow"></div>
+                            <img src="hero-graphic.png" alt="Borbás Webdesign Visual" class="hero-image">
+                        </div>
+                        
+                        <!-- Floating Assets -->
+                        <div class="floating-asset floating-code glass-card">
+                            <div class="floating-inner">
+                                <div class="asset-header">
+                                    <span class="asset-dot red"></span>
+                                    <span class="asset-dot yellow"></span>
+                                    <span class="asset-dot green"></span>
+                                </div>
+                                <pre><code>.borbas-design {
+  seo: 100%;
+  speed: 0.1s;
+}</code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-asset floating-audit glass-card">
+                            <div class="floating-inner">
+                                <div class="audit-score">
+                                    <div class="score-circle">100</div>
+                                    <span class="score-label">Sebesség</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-asset floating-cursor">
+                            <div class="floating-inner">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="cursor-svg"><path d="M4.5 3v15.2l4.7-4.7 4.1 8.8 2.7-1.3-4.1-8.8 5.9.1z"/></svg>
+                                <span class="cursor-name">Konverzió</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="section-padding" id="szolgaltatasok">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="badge">Szolgáltatások</span>
+                    <h2 class="section-title">Mit kínál a <span>Borbás Webdesign</span>?</h2>
+                    <p>Minden weboldal teljesen egyedi kóddal, a legújabb technológiákkal és reszponzív elrendezéssel készül.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Service Card 1 -->
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <!-- SVG Code for Pen/Ruler -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#neon-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                        </div>
+                        <h3>Egyedi Webdesign</h3>
+                        <p>Nincsenek unalmas sablonok. Minden elrendezés a márkád stílusára szabottan, prémium grafikával és vizuális elemekkel készül.</p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <!-- SVG Code for Code -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#neon-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Profi Programozás</h3>
+                        <p>Egyedileg megírt kód sablonok nélkül. Gyors betöltődés, biztonságos működés és tökéletes megjelenés minden mobiltelefonon.</p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <!-- SVG Code for Search/Trend -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#neon-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6"/></svg>
+                        </div>
+                        <h3>Google Keresőbarát Kód</h3>
+                        <p>Úgy alakítom ki a weboldalad, hogy a Google kereső könnyen megtalálja (SEO), és a jövőbeli vendégeid azonnal elérjenek téged.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section class="section-padding" id="referenciak">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="badge">Referenciák</span>
+                    <h2 class="section-title">Legutóbbi <span>munkáim</span></h2>
+                    <p>Tekintsd meg az elkészült weboldalaim és design terveim válogatását.</p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-card glass-card">
+                        <div class="portfolio-image-wrap">
+                            <img src="portfolio-winery.png?v=3" alt="Wine&Sofi Boutique Winery Mockup" class="portfolio-img">
+                            <div class="portfolio-hover-overlay">
+                                <span class="portfolio-badge">Modern arculat & integrált fizetés</span>
+                                <span class="portfolio-category">Egyedi Webshop (E-commerce)</span>
+                                <h4>Wine&Sofi</h4>
+                                <p>Prémium badacsonyi butikborászat egyedi tervezésű weboldala online borrendelési lehetőséggel.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="portfolio-card glass-card">
+                        <div class="portfolio-image-wrap">
+                            <img src="portfolio-hotel.png?v=3" alt="Vine&Roof Panoramic Guesthouse Mockup" class="portfolio-img">
+                            <div class="portfolio-hover-overlay">
+                                <span class="portfolio-badge">180° balatoni panoráma</span>
+                                <span class="portfolio-category">Bemutatkozó & Foglalási oldal</span>
+                                <h4>Vine&Roof</h4>
+                                <p>Panorámás badacsonyi vendégház bemutató oldala digitális detox élménnyel.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-card glass-card">
+                        <div class="portfolio-image-wrap">
+                            <img src="portfolio-academy.png?v=2" alt="TestAcademy QA Mentoring Mockup" class="portfolio-img">
+                            <div class="portfolio-hover-overlay">
+                                <span class="portfolio-badge">Oktatói felület</span>
+                                <span class="portfolio-category">Jelentkezési & Oktatási Oldal</span>
+                                <h4>TestAcademy</h4>
+                                <p>Tanfolyami bemutató és online jelentkezési rendszerrel ellátott modern oktatói portál.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="portfolio-card glass-card">
+                        <div class="portfolio-image-wrap">
+                            <img src="portfolio-farm.png?v=3" alt="Szántóföldi Öntözés IoT Mockup" class="portfolio-img">
+                            <div class="portfolio-hover-overlay">
+                                <span class="portfolio-badge">Egyedi kalkulátor integráció</span>
+                                <span class="portfolio-category">Szolgáltatás-bemutató Landing Page</span>
+                                <h4>Szántóföldi Öntözés</h4>
+                                <p>Öntözéstechnikai szolgáltatások bemutató oldala egyedi, interaktív vízigény-kalkulátorral.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="portfolio-card glass-card">
+                        <div class="portfolio-image-wrap">
+                            <img src="portfolio-cosmetics.png?v=3" alt="Százszorszép Kozmetika Mockup" class="portfolio-img">
+                            <div class="portfolio-hover-overlay">
+                                <span class="portfolio-badge">Online időpontfoglalóval</span>
+                                <span class="portfolio-category">Szalon & Időpontfoglaló Oldal</span>
+                                <h4>Százszorszép Kozmetika</h4>
+                                <p>Elegáns szépségszalon weboldala beépített online naptárral és interaktív kezelési katalógussal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS SECTION -->
+        <section class="section-padding" id="folyamat">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="badge">Munkafolyamat</span>
+                    <h2 class="section-title">Hogyan születik a <span>weboldalad</span>?</h2>
+                    <p>Lépésről lépésre kísérem végig a projektedet az első konzultációtól a sikeres élesítésig.</p>
+                </div>
+                
+                <div class="workflow-timeline">
+                    <!-- Step 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">1</div>
+                        <div class="timeline-content">
+                            <span class="step-no">01. lépés</span>
+                            <h3>Közös Tervezés & Kezdés</h3>
+                            <p>Átbeszéljük az üzleti céljaidat, és veled együtt, lépésről lépésre kezdjük el felépíteni a honlapot, hogy pontosan olyan legyen, amilyennek elképzelted.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">2</div>
+                        <div class="timeline-content">
+                            <span class="step-no">02. lépés</span>
+                            <h3>Kódolás & Animációk</h3>
+                            <p>Elkészítem az oldal egyedi szerkezetét és megjelenését. Beépítem a látványos interakciókat és a modern, elegáns dizájn elemeket.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">3</div>
+                        <div class="timeline-content">
+                            <span class="step-no">03. lépés</span>
+                            <h3>Sebesség & Google Optimalizálás</h3>
+                            <p>A honlapot tesztelem és felkészítem, hogy mobiltelefonon is azonnal betöltsön. Beállítom a Google keresőhöz szükséges alapvető leírásokat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">4</div>
+                        <div class="timeline-content">
+                            <span class="step-no">04. lépés</span>
+                            <h3>Átadás & Támogatás</h3>
+                            <p>Segítek a domain és a tárhely beállításokban, majd átadok neked minden hozzáférést. Nem hagylak magadra: ha igényed van rá, a jövőben is segítek a karbantartásban.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULATOR SECTION -->
+        <section class="section-padding" id="kalkulator">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="badge">Interaktív Kalkulátor</span>
+                    <h2 class="section-title">Számolj ki egy <span>irányárat</span>!</h2>
+                    <p>Válaszd ki a projekted igényeit, és lásd azonnal a hozzávetőleges árat és a benne foglalt szolgáltatásokat.</p>
+                </div>
+                
+                <div class="calculator-container">
+                    <!-- Left: Options Selection -->
+                    <div class="calc-options-wrap">
+                        <!-- Group 1: Project Type -->
+                        <div class="calc-group">
+                            <span class="calc-label">1. Weboldal Típusa</span>
+                            <div class="calc-grid">
+                                <label class="calc-card selected" id="type-landing">
+                                    <input type="radio" name="project-type" value="landing" checked>
+                                    <h4>Landing Page</h4>
+                                    <p>Egyoldalas értékesítési oldal célzott üzenettel.</p>
+                                </label>
+                                <label class="calc-card" id="type-business">
+                                    <input type="radio" name="project-type" value="business">
+                                    <h4>Bemutatkozó Oldal</h4>
+                                    <p>Több aloldalas, céges bemutatkozó weboldal.</p>
+                                </label>
+                                <label class="calc-card" id="type-webshop">
+                                    <input type="radio" name="project-type" value="webshop">
+                                    <h4>Webáruház (Webshop)</h4>
+                                    <p>Online értékesítés fizetési kapuval és katalógussal.</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Group 2: Additional Features -->
+                        <div class="calc-group">
+                            <span class="calc-label">2. Kiegészítő funkciók</span>
+                            <div class="calc-features-grid">
+                                <label class="calc-card" id="feature-multilang">
+                                    <input type="checkbox" name="calc-features" value="multilang">
+                                    <h4>Kétnyelvűség</h4>
+                                    <p>Nyelvválasztó azoknak, akik külföldi vendégeket is fogadnak.</p>
+                                </label>
+                                <label class="calc-card" id="feature-animations">
+                                    <input type="checkbox" name="calc-features" value="animations">
+                                    <h4>Látványos mozgások</h4>
+                                    <p>Prémium és elegáns vizuális élmény, ami kiemel a versenytársaid közül.</p>
+                                </label>
+                                <label class="calc-card" id="feature-seo">
+                                    <input type="checkbox" name="calc-features" value="seo">
+                                    <h4>Google Helyezésjavítás</h4>
+                                    <p>Segít, hogy a konkurenciáid előtt jelenj meg a helyi kereséseknél (pl. "fodrász Szeged").</p>
+                                </label>
+                                <label class="calc-card" id="feature-admin">
+                                    <input type="checkbox" name="calc-features" value="admin">
+                                    <h4>Saját Szerkesztőfelület</h4>
+                                    <p>Egy egyszerű felület, ahol te magad is bármikor módosíthatod az áraidat, nyitvatartásodat.</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Summary & Action -->
+                    <div class="calc-summary-panel">
+                        <div class="calc-summary-header">
+                            <span class="calc-label">Becsült kalkuláció</span>
+                            <div class="calc-price-display">
+                                <span class="calc-price-label">Irányár nettó:</span>
+                                <div class="calc-price-value" id="calc-total-price">150 000 <span>Ft-tól</span></div>
+                            </div>
+                            <p style="font-size: 0.85rem; margin-bottom: 24px; line-height: 1.4;">Az ár tájékoztató jellegű, amely tartalmazza a tárhely és a domain kezdeti beállítását (teljes átadás).<br>Átadás utáni támogatás/support: <strong>15 000 Ft / óra</strong>.</p>
+                        </div>
+                        
+                        <div>
+                            <ul class="calc-features-list">
+                                <li class="calc-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    100% egyedi és reszponzív design
+                                </li>
+                                <li class="calc-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Lighthouse optimalizálás (Sebesség)
+                                </li>
+                                <li class="calc-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Technikai SEO alapok beállítása
+                                </li>
+                                <li class="calc-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Kapcsolati űrlap & GDPR kompatibilitás
+                                </li>
+                                <li class="calc-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Tárhely & domain kezdeti beállítása
+                                </li>
+                            </ul>
+                            
+                            <button class="btn-primary" id="calc-cta-btn" style="width: 100%; justify-content: center;">
+                                Ajánlatot kérek ezen adatokkal <span class="arrow">→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CONTACT MODAL (AJÁNLATKÉRŐ MODAL) -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            
+            <!-- Standard Form Block -->
+            <div id="modal-form-block">
+                <div class="modal-header">
+                    <h3>Kérj egyedi árajánlatot</h3>
+                    <p>Add meg a részleteket, és 24 órán belül felveszem veled a kapcsolatot egy egyedi ajánlattal.</p>
+                </div>
+                
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">Teljes név *</label>
+                        <input type="text" id="contact-name" class="form-input" placeholder="Pl. Borbás Dániel" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">E-mail cím *</label>
+                        <input type="email" id="contact-email" class="form-input" placeholder="Pl. daniel@borbaswebdesign.hu" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-project" class="form-label">Projekt Típusa</label>
+                        <select id="contact-project" class="form-input">
+                            <option value="landing">Landing Page</option>
+                            <option value="business">Bemutatkozó Oldal</option>
+                            <option value="webshop">Webáruház (Webshop)</option>
+                            <option value="other">Egyéb egyedi fejlesztés</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label">Rövid leírás / igények</label>
+                        <textarea id="contact-message" class="form-textarea" placeholder="Milyen weboldalt szeretnél? Van-e már meglévő arculat vagy domain név?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary form-submit-btn">
+                        Üzenet elküldése <span class="arrow">→</span>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Success Message Block (Hidden by default) -->
+            <div class="form-success-message" id="modal-success-block">
+                <div class="form-success-icon">✓</div>
+                <h3>Köszönöm az ajánlatkérést!</h3>
+                <p style="margin-top: 12px; margin-bottom: 24px;">Az üzeneted sikeresen elküldve. Hamarosan, de legfeljebb 24 órán belül keresni foglak a megadott e-mail címen.</p>
+                <button class="btn-secondary" id="modal-success-close-btn" style="margin: 0 auto;">Bezárás</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="#hero" class="logo" style="margin-bottom: 8px;">
+                    <span>Borbás</span>Webdesign<div class="logo-dot"></div>
+                </a>
+                <p>© 2026 Borbás Webdesign. Minden jog fenntartva.</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Github">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
