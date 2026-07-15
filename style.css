@@ -53,7 +53,7 @@
 
 html {
     scroll-behavior: smooth;
-    background: radial-gradient(circle at 50% 50%, #0d121f 0%, var(--bg-dark) 100%) no-repeat fixed;
+    background-color: var(--bg-dark);
     color: var(--text-gray-light);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
