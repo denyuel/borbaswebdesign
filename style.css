@@ -205,16 +205,16 @@ button {
 .glow-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(130px);
-    opacity: 0.08;
+    /* Removed filter: blur(130px) to prevent heavy real-time canvas composite paint load */
     animation: float-glow 25s infinite alternate ease-in-out;
     will-change: transform;
+    pointer-events: none;
 }
 
 .glow-1 {
     width: 600px;
     height: 600px;
-    background: var(--color-primary);
+    background: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.12) 0%, transparent 70%);
     top: -200px;
     left: -200px;
 }
@@ -222,7 +222,7 @@ button {
 .glow-2 {
     width: 500px;
     height: 500px;
-    background: var(--color-secondary);
+    background: radial-gradient(circle, rgba(var(--color-secondary-rgb), 0.12) 0%, transparent 70%);
     top: 40%;
     right: -250px;
     animation-delay: -5s;
@@ -231,7 +231,7 @@ button {
 .glow-3 {
     width: 600px;
     height: 600px;
-    background: var(--color-primary);
+    background: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.1) 0%, transparent 70%);
     bottom: -300px;
     left: 20%;
     animation-delay: -10s;
@@ -598,8 +598,10 @@ button {
     aspect-ratio: 1;
     border-radius: var(--radius-xl);
     padding: 10px;
-    background: rgba(13, 18, 30, 0.85); /* Solid high-performance glass-like slate background */
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-subtle);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0,0,0,0.4);
     animation: floating-visual 6s ease-in-out infinite;
