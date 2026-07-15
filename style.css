@@ -65,16 +65,7 @@ body {
     min-height: 100vh;
 }
 
-/* Interactive Background Canvas */
-#bg-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-}
+
 
 /* Subtle Noise Texture Overlay */
 body::after {
