@@ -336,46 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // --- SPOTLIGHT CARD EFFECT ---
-    const spotlightCards = document.querySelectorAll('.glass-card');
-    spotlightCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
-        });
-    });
 
-    // --- SCROLL PARALLAX & 3D TILT ON HERO ---
-    const heroOuter = document.querySelector('.hero-image-wrapper-outer');
-    const heroCode = document.querySelector('.floating-code');
-    const heroAudit = document.querySelector('.floating-audit');
-    const heroCursor = document.querySelector('.floating-cursor');
-    
-    if (heroOuter && heroCode && heroAudit && heroCursor) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            // Only update transforms when hero is visible to conserve performance
-            if (scrolled < 800) {
-                // Subtle 3D tilt back on scroll
-                const tiltX = scrolled * 0.03;
-                const tiltY = scrolled * -0.015;
-                heroOuter.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-                
-                // Parallax offsets for floating assets
-                const codeY = scrolled * 0.06;
-                const auditY = scrolled * -0.08;
-                const cursorX = scrolled * -0.04;
-                const cursorY = scrolled * 0.05;
-                
-                heroCode.style.transform = `translateY(${codeY}px)`;
-                heroAudit.style.transform = `translateY(${auditY}px)`;
-                heroCursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-            }
-        });
-    }
 
 
 
