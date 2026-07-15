@@ -491,4 +491,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(styleSheet);
+
+    // --- FAQ ACCORDION ---
+    const faqTriggers = document.querySelectorAll('.faq-trigger');
+    faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const faqItem = trigger.parentElement;
+            const icon = trigger.querySelector('.faq-icon');
+            
+            // Toggle active class
+            faqItem.classList.toggle('active');
+            
+            // Toggle icon
+            if (faqItem.classList.contains('active')) {
+                icon.textContent = '−';
+            } else {
+                icon.textContent = '+';
+            }
+        });
+    });
 });
