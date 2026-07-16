@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     else if (checkbox.value === 'animations') featText = 'Prémium animációk és vizuális effektek';
                     else if (checkbox.value === 'seo') featText = 'Google Helyezésjavítás csomag';
                     else if (checkbox.value === 'admin') featText = 'Saját Szerkesztőfelület (árak, szövegek, képek)';
-                    else if (checkbox.value === 'support') featText = '3 hónap VIP támogatás (15 €/óra helyett)';
+                    else if (checkbox.value === 'support') featText = '3 hónap VIP támogatás (15 000 Ft/óra helyett)';
                     
                     if (featText) {
                         const li = document.createElement('li');
