@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const packageFeatures = {
         landing: [
-            "1 oldalas, vendégszerző felépítés",
+            "1 oldalas, bemutatkozó és értékesítő felépítés",
             "Célzott üzenet & felhívás gombok",
-            "Kapcsolatfelvételi űrlap",
+            "Online időpontfoglaló (Salonic, Google Calendar) integráció",
             "Egyedi, rád szabott arculati design",
             "Maximális betöltési sebesség (gyors oldal)",
             "Google kereső regisztráció (SEO alapok)",
@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         business: [
             "Több aloldalas struktúra (5-7 aloldal)",
+            "Online időpontfoglaló (Salonic, Google Calendar) integráció",
             "Képgaléria / Portfólió a munkáidról",
             "Google Térkép & Kapcsolati rész",
             "Egyedi, rád szabott arculati design",
