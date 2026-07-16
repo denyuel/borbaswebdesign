@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
             multilang: 45000,
             animations: 30000,
             seo: 35000,
-            admin: 70000
+            admin: 70000,
+            support: 25000
         }
     };
 
@@ -150,7 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (checkbox.value === 'multilang') featText = 'Nyelvválasztó (magyar + angol/egyéb)';
                     else if (checkbox.value === 'animations') featText = 'Prémium animációk és vizuális effektek';
                     else if (checkbox.value === 'seo') featText = 'Google Helyezésjavítás csomag';
-                    else if (checkbox.value === 'admin') featText = 'Saját Szerkesztőfelület az árakhoz';
+                    else if (checkbox.value === 'admin') featText = 'Saját Szerkesztőfelület (árak, szövegek, képek)';
+                    else if (checkbox.value === 'support') featText = '3 hónap VIP támogatás (15 €/óra helyett)';
                     
                     if (featText) {
                         const li = document.createElement('li');
