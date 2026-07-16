@@ -1623,9 +1623,51 @@ button {
         gap: 24px;
         text-align: center;
     }
+    
+    /* Portfolio mobile layout: make details always visible below the image */
+    .portfolio-image-wrap {
+        overflow: visible !important;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .portfolio-hover-overlay {
+        position: relative !important;
+        opacity: 1 !important;
+        background: rgba(255, 255, 255, 0.02) !important;
+        padding: 24px !important;
+        transform: none !important;
+        justify-content: flex-start !important;
+        height: auto !important;
+        border-bottom-left-radius: var(--radius-xl);
+        border-bottom-right-radius: var(--radius-xl);
+        border-top: 1px solid var(--border-subtle);
+    }
+
+    .portfolio-hover-overlay h4,
+    .portfolio-hover-overlay p,
+    .portfolio-hover-overlay .portfolio-category,
+    .portfolio-hover-overlay .portfolio-badge {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    
+    .portfolio-hover-overlay h4 {
+        font-size: 1.25rem !important;
+        margin-top: 4px;
+    }
+
+    .portfolio-hover-overlay p {
+        margin-bottom: 16px !important;
+        color: var(--text-gray) !important;
+    }
+    
+    .portfolio-link {
+        align-self: flex-start;
+    }
 }
 
-/* Mobile responsive fixes for the calculator */
+/* Mobile responsive fixes for the calculator and grids */
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 1.8rem;
@@ -1633,6 +1675,16 @@ button {
     
     .section-title {
         font-size: 1.5rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
     
     .calculator-container {
