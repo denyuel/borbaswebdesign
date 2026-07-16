@@ -301,13 +301,34 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Küldés folyamatban...';
             
-            // Simulate API request (delay)
-            setTimeout(() => {
-                document.getElementById('modal-form-block').style.display = 'none';
-                document.getElementById('modal-success-block').classList.add('active');
+            // Collect Form Data
+            const formData = new FormData(contactForm);
+            
+            // Send to FormSubmit using Daniel's email routing
+            fetch('https://formsubmit.co/ajax/daniel.borbas@borbaswebdesign.hu', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success === "true" || data.success === true) {
+                    document.getElementById('modal-form-block').style.display = 'none';
+                    document.getElementById('modal-success-block').classList.add('active');
+                } else {
+                    alert('Hiba történt az üzenet küldése során. Kérlek próbáld meg újra, vagy küldj közvetlen emailt a daniel.borbas@borbaswebdesign.hu címre!');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Hiba történt a kapcsolódásban. Kérlek próbáld meg újra, vagy küldj közvetlen emailt a daniel.borbas@borbaswebdesign.hu címre!');
+            })
+            .finally(() => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
-            }, 1000);
+            });
         });
     }
 

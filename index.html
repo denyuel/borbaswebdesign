@@ -16,7 +16,7 @@
     <meta property="og:description" content="Egyedi, prémium minőségű weboldalak tervezése és fejlesztése elképesztő sebességgel és keresőoptimalizált kóddal.">
     
     <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="style.css?v=20">
+    <link rel="stylesheet" href="style.css?v=21">
 </head>
 <body>
 
@@ -517,19 +517,24 @@
                 </div>
                 
                 <form id="contact-form">
+                    <!-- FormSubmit Configuration -->
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_subject" value="Új weboldal árajánlatkérés!">
+                    <input type="hidden" name="_captcha" value="false">
+
                     <div class="form-group">
                         <label for="contact-name" class="form-label">Teljes név *</label>
-                        <input type="text" id="contact-name" class="form-input" placeholder="Pl. Borbás Dániel" required>
+                        <input type="text" id="contact-name" name="Név" class="form-input" placeholder="Pl. Borbás Dániel" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="contact-email" class="form-label">E-mail cím *</label>
-                        <input type="email" id="contact-email" class="form-input" placeholder="Pl. daniel@borbaswebdesign.hu" required>
+                        <input type="email" id="contact-email" name="Email" class="form-input" placeholder="Pl. daniel@borbaswebdesign.hu" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="contact-project" class="form-label">Projekt Típusa</label>
-                        <select id="contact-project" class="form-input">
+                        <select id="contact-project" name="Projekt Típusa" class="form-input">
                             <option value="landing">Landing Page</option>
                             <option value="business">Bemutatkozó Oldal</option>
                             <option value="webshop">Webáruház (Webshop)</option>
@@ -539,7 +544,7 @@
                     
                     <div class="form-group">
                         <label for="contact-message" class="form-label">Rövid leírás / igények</label>
-                        <textarea id="contact-message" class="form-textarea" placeholder="Milyen weboldalt szeretnél? Van-e már meglévő arculat vagy domain név?"></textarea>
+                        <textarea id="contact-message" name="Üzenet" class="form-textarea" placeholder="Milyen weboldalt szeretnél? Van-e már meglévő arculat vagy domain név?"></textarea>
                     </div>
                     
                     <button type="submit" class="btn-primary form-submit-btn">
@@ -572,6 +577,6 @@
     </footer>
 
     <!-- JS Logic -->
-    <script src="app.js?v=20"></script>
+    <script src="app.js?v=21"></script>
 </body>
 </html>
