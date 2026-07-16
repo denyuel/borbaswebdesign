@@ -179,7 +179,7 @@ button {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 1.2;
     margin-bottom: 16px;
 }
@@ -414,7 +414,7 @@ button {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     line-height: 1.15;
     letter-spacing: -0.02em;
     margin-bottom: 24px;
@@ -432,7 +432,7 @@ button {
 }
 
 .hero p {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: var(--text-gray-light);
     margin-bottom: 40px;
     max-width: 580px;
@@ -1572,11 +1572,15 @@ button {
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
     }
     
     .hero-actions {
@@ -1623,6 +1627,14 @@ button {
 
 /* Mobile responsive fixes for the calculator */
 @media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
     .calculator-container {
         padding: 24px 16px;
     }
