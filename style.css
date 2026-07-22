@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 /* --- DESIGN TOKENS --- */
 :root {
@@ -28,7 +28,7 @@
     --grid-color: rgba(15, 23, 42, 0.04);
     
     /* Fonts */
-    --font-heading: 'Sora', sans-serif;
+    --font-heading: 'Playfair Display', serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
     
     /* Spacing & Sizes */
@@ -155,7 +155,7 @@ button {
 }
 
 .section-padding {
-    padding: 120px 0;
+    padding: 70px 0;
 }
 
 .section-title-wrap {
@@ -274,19 +274,29 @@ button {
 }
 
 .logo {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--text-white);
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .logo span {
     background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.logo-script {
+    font-family: 'Caveat', cursive;
+    font-size: 1.9rem;
+    color: var(--text-white);
+    font-weight: 700;
+    transform: rotate(-3deg);
+    margin-left: 4px;
+    display: inline-block;
 }
 
 .logo-dot {
@@ -1614,7 +1624,7 @@ button {
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: 80px 0;
+        padding: 50px 0;
     }
     
     .nav-menu {
