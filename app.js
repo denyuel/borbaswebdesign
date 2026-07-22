@@ -241,6 +241,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- CALCULATOR ACCORDION ---
+    const calcGroups = document.querySelectorAll('.calc-group');
+    calcGroups.forEach(group => {
+        const trigger = group.querySelector('.calc-group-trigger');
+        const icon = group.querySelector('.calc-group-icon');
+        
+        if (trigger) {
+            trigger.addEventListener('click', () => {
+                const isActive = group.classList.contains('active');
+                
+                // Close all groups
+                calcGroups.forEach(g => {
+                    g.classList.remove('active');
+                    const gIcon = g.querySelector('.calc-group-icon');
+                    if (gIcon) gIcon.innerText = '+';
+                });
+                
+                // Open if it wasn't active
+                if (!isActive) {
+                    group.classList.add('active');
+                    if (icon) icon.innerText = '−';
+                }
+            });
+        }
+    });
+
+    // Auto-step: when selecting a project type, close group 1 and open group 2
+    typeRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            setTimeout(() => {
+                const groupFeatures = document.getElementById('calc-group-features');
+                if (groupFeatures && !groupFeatures.classList.contains('active')) {
+                    calcGroups.forEach(g => g.classList.remove('active'));
+                    groupFeatures.classList.add('active');
+                    const gIcon = groupFeatures.querySelector('.calc-group-icon');
+                    if (gIcon) gIcon.innerText = '−';
+                }
+            }, 300);
+        });
+    });
+
     // Initial calculation
     calculateTotal();
 
