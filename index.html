@@ -16,7 +16,7 @@
     <meta property="og:description" content="Egyedi, prémium minőségű weboldalak tervezése és fejlesztése elképesztő sebességgel és keresőoptimalizált kóddal.">
     
     <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="style.css?v=23">
+    <link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
 
@@ -384,6 +384,28 @@
                                 </label>
                             </div>
                         </div>
+
+                        <!-- Group 3: Meeting Location -->
+                        <div class="calc-group" style="margin-top: 32px;">
+                            <span class="calc-label">3. Konzultáció / Találkozó</span>
+                            <div class="calc-grid">
+                                <label class="calc-card active" id="meet-online">
+                                    <input type="radio" name="meet-location" value="online" checked>
+                                    <h4>Online konzultáció</h4>
+                                    <p>Ingyenes egyeztetés (Google Meet / telefon) az ország bármely pontjáról.</p>
+                                </label>
+                                <label class="calc-card" id="meet-szeged">
+                                    <input type="radio" name="meet-location" value="szeged">
+                                    <h4>Személyes találkozó Szegeden</h4>
+                                    <p>Személyes egyeztetés Szegeden (+15 000 Ft kiszállási díj és útidő).</p>
+                                </label>
+                                <label class="calc-card" id="meet-budapest">
+                                    <input type="radio" name="meet-location" value="budapest">
+                                    <h4>Személyes találkozó Budapesten</h4>
+                                    <p>Személyes egyeztetés Budapesten (+50 000 Ft oda-vissza útidő és költségek).</p>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Right: Summary & Action -->
@@ -499,6 +521,26 @@
                             <p>Igen, minden általam készített weboldal 100% reszponzív, azaz tökéletesen és gyönyörűen igazodik a mobiltelefonok, tabletek és laptopok kijelzőjéhez is, így a vendégeid bárhonnan könnyen elérnek.</p>
                         </div>
                     </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>Hogyan történik a fizetés? Kérsz előleget?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p>Igen. A munka megkezdése előtt 50% előleg fizetése szükséges (ez garantálja mindkét fél elköteleződését és biztosítja a fejlesztési időpontodat). A fennmaradó 50%-ot pedig csak a teljesen kész, tesztelt weboldal átadásakor kell kifizetned.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>Van lehetőség személyes találkozóra és egyeztetésre?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <p>Természetesen! Az alapértelmezett online egyeztetés (Google Meet, telefon) teljesen ingyenes. Ha azonban személyes találkozót szeretnél, arra is van lehetőség: Szegeden +15 000 Ft kiszállási díjon (fedezi az útidőt és az üzemanyagot), Budapesten pedig +50 000 Ft díjon (fedezi a 5 órás oda-vissza utat és költségeket).</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -577,6 +619,6 @@
     </footer>
 
     <!-- JS Logic -->
-    <script src="app.js?v=23"></script>
+    <script src="app.js?v=24"></script>
 </body>
 </html>

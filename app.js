@@ -56,6 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
             seo: 35000,
             admin: 70000,
             support: 25000
+        },
+        meetings: {
+            online: 0,
+            szeged: 15000,
+            budapest: 50000
         }
     };
 
@@ -92,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const typeRadios = document.querySelectorAll('input[name="project-type"]');
     const featureCheckboxes = document.querySelectorAll('input[name="calc-features"]');
+    const meetingRadios = document.querySelectorAll('input[name="meet-location"]');
     const totalPriceDisplay = document.getElementById('calc-total-price');
     const calcCards = document.querySelectorAll('.calc-card');
 
@@ -126,6 +132,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.classList.remove('selected');
             }
         });
+
+        // Find selected meeting location
+        let selectedMeeting = 'online';
+        meetingRadios.forEach(radio => {
+            const card = radio.closest('.calc-card');
+            if (radio.checked) {
+                selectedMeeting = radio.value;
+                card.classList.add('selected');
+            } else {
+                card.classList.remove('selected');
+            }
+        });
+        
+        total += prices.meetings[selectedMeeting];
 
         // Update dynamic summary checklist
         const featuresListContainer = document.querySelector('.calc-features-list');
@@ -166,6 +186,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             });
+
+            // Add selected meeting option to checklist
+            let meetText = 'Konzultáció: Ingyenes online';
+            if (selectedMeeting === 'szeged') meetText = 'Személyes konzultáció Szegeden';
+            else if (selectedMeeting === 'budapest') meetText = 'Személyes találkozó Budapesten';
+            
+            const liMeet = document.createElement('li');
+            liMeet.className = 'calc-feature-item';
+            liMeet.style.fontWeight = '600';
+            liMeet.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                ${meetText}
+            `;
+            featuresListContainer.appendChild(liMeet);
         }
 
         // Animate price change
@@ -266,9 +300,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             
+            // Get selected meeting
+            let meetingTitle = 'Online konzultáció';
+            meetingRadios.forEach(radio => {
+                if (radio.checked) {
+                    meetingTitle = radio.closest('.calc-card').querySelector('h4').innerText;
+                }
+            });
+            
             const messageTextarea = document.getElementById('contact-message');
-            if (messageTextarea && selectedFeatures.length > 0) {
-                messageTextarea.value = `Érdekelne az árajánlat az alábbi extra opciókkal:\n- ${selectedFeatures.join('\n- ')}`;
+            if (messageTextarea) {
+                let msg = '';
+                if (selectedFeatures.length > 0) {
+                    msg += `Érdekelne az árajánlat az alábbi extra opciókkal:\n- ${selectedFeatures.join('\n- ')}\n\n`;
+                }
+                msg += `Konzultáció / Találkozó: ${meetingTitle}`;
+                messageTextarea.value = msg;
             }
             
             openModal(selectedType);
