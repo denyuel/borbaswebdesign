@@ -1430,7 +1430,7 @@ button {
 
 .rolam-image-wrap {
     width: 100%;
-    aspect-ratio: 1.15;
+    aspect-ratio: 1.0;
     border-radius: var(--radius-xl);
     overflow: hidden;
     border: 1px solid var(--border-bright);
