@@ -1120,8 +1120,8 @@ button {
     padding: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .calc-summary-header {
