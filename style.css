@@ -1145,6 +1145,7 @@ button {
     font-weight: 800;
     color: var(--text-white);
     margin-top: 8px;
+    white-space: nowrap;
 }
 
 .calc-price-value span {
@@ -1712,5 +1713,13 @@ button {
     .calc-grid {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+    
+    .calc-price-value {
+        font-size: 1.8rem;
+    }
+    
+    .calc-price-value span {
+        font-size: 1.1rem;
     }
 }
