@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
             webshop: 450000
         },
         features: {
-            multilang: 45000,
-            animations: 30000,
+            reviews: 20000,
+            chat: 15000,
             seo: 35000,
             admin: 70000,
             support: 25000
@@ -168,8 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
             featureCheckboxes.forEach(checkbox => {
                 if (checkbox.checked) {
                     let featText = '';
-                    if (checkbox.value === 'multilang') featText = 'Nyelvválasztó (magyar + angol/egyéb)';
-                    else if (checkbox.value === 'animations') featText = 'Prémium animációk és vizuális effektek';
+                    if (checkbox.value === 'reviews') featText = 'Google Értékelések beépítése';
+                    else if (checkbox.value === 'chat') featText = 'Messenger & WhatsApp chat integráció';
                     else if (checkbox.value === 'seo') featText = 'Google Helyezésjavítás csomag';
                     else if (checkbox.value === 'admin') featText = 'Saját Szerkesztőfelület (árak, szövegek, képek)';
                     else if (checkbox.value === 'support') featText = '3 hónap VIP támogatás';
