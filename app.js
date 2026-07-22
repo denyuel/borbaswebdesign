@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const calcCards = document.querySelectorAll('.calc-card');
 
     function formatPrice(number) {
-        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " Ft-tól";
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "\u00A0") + "\u00A0Ft-tól";
     }
 
     function calculateTotal() {
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     else if (checkbox.value === 'animations') featText = 'Prémium animációk és vizuális effektek';
                     else if (checkbox.value === 'seo') featText = 'Google Helyezésjavítás csomag';
                     else if (checkbox.value === 'admin') featText = 'Saját Szerkesztőfelület (árak, szövegek, képek)';
-                    else if (checkbox.value === 'support') featText = '3 hónap VIP támogatás (15 000 Ft/óra helyett)';
+                    else if (checkbox.value === 'support') featText = '3 hónap VIP támogatás (15\u00A0000 Ft/óra helyett)';
                     
                     if (featText) {
                         const li = document.createElement('li');
