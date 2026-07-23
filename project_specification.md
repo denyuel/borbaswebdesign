@@ -21,7 +21,7 @@ A weboldal a **Nordic Light** stílusvilágot követi: tiszta, skandináv világ
 
 ### 1.2. Tipográfia (Betűtípusok)
 *   **Főcímek & Fejlécek (`--font-heading`):** `'Playfair Display', serif` (Elegáns talpas betűtípus)
-*   **Törzsszöveg & Felületek (`--font-body`):** `'Plus Jakarta Sans', sans-serif` (Modern, jól olvasható talpatlan betűtípus)
+*   **Törzsszöveg & Felületek (`--font-body`):** `'Plus Jakarta Sans', sans-serif` (Modern talpatlan betűtípus) & `'Pinyon Script', cursive` (Spencerian kalligráfia a Borbás szóhoz)
 *   **Logó Kézírásos Rész (`.logo-script`):** `'Alex Brush', cursive` (Elegáns, vékony ecsetvonásos kalligráfia)
 
 ### 1.3. Strukturális Értékek
@@ -65,7 +65,7 @@ $$\text{Végösszeg} = \text{Csomag Alapár} + \sum(\text{Kiegészítő Funkció
 
 A honlap egy egyoldalas (Single Page) struktúrára épül, amely horgonyokkal (`anchors`) vezeti a látogatót:
 
-1.  **Header (Navigáció):** Logó (Borbás Webdesign - tiszta, minimalista aláírás logó aláhúzás swoosh-sal, ikon nélkül), menüpontok, és egy kiemelt Kapcsolat gomb. Mobilon hamburgermenüvé alakul.
+1.  **Header (Navigáció):** Logó (Borbás Webdesign - prémium két-tónusú DBW kör monogram ikon, és kétféleképpen kalligrafikus aláírás logó aláhúzás swoosh-sal), menüpontok, és egy kiemelt Kapcsolat gomb. Mobilon hamburgermenüvé alakul.
 2.  **Hero (Nyitó szekció):** Főcím kiemeléssel, meggyőző leírás, CTA gombok (kalkulátorhoz és kapcsolatfelvételhez), mellette a prémium multi-device (szalon-fókuszú) mockup kép.
 3.  **Szolgáltatások (Services):** 3 db prémium kártya (Webdesign, Programozás, Foglalási rendszer) tetejükön fekvő formátumú, esztétikus eszköz-mockup képekkel.
 4.  **Rólam (About):** Személyes bemutatkozás Dánielről, a jobb oldalon a generált téli stílusú, szürke zakós, hófehér inges profi portréval. Alatta a 3 fő ígéret (48 órás átadás, fix árak, support).

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Sacramento&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 /* --- DESIGN TOKENS --- */
 :root {
@@ -287,19 +287,26 @@ button {
 }
 
 .logo span:first-of-type {
-    color: var(--color-primary); /* Forest Teal */
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2.5rem;
+    color: var(--color-primary) !important; /* Forest Teal */
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -6px; /* align baseline */
 }
 
 .logo .logo-script {
     font-family: 'Alex Brush', cursive;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: var(--color-secondary) !important; /* Bright Sky Blue */
     font-weight: 400;
     transform: rotate(-2deg);
-    margin-left: 8px;
+    margin-left: -2px; /* overlap script tails elegantly */
     display: inline-block;
     position: relative;
     z-index: 2;
+    vertical-align: middle;
 }
 
 .logo-text-group {
@@ -1810,13 +1817,13 @@ button {
 }
 
 
-/* removed */ .logo-mark-removed {
+.logo-mark {
     width: 32px;
     height: 32px;
     flex-shrink: 0;
     transition: var(--transition-smooth);
 }
 
-.logo:hover /* removed */ .logo-mark-removed {
+.logo:hover .logo-mark {
     transform: rotate(6deg) scale(1.08);
 }
