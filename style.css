@@ -1832,8 +1832,8 @@ button {
 
 
 .logo-mark {
-    width: 38px;
-    height: 38px;
+    width: 44px;
+    height: 44px;
     flex-shrink: 0;
     transition: var(--transition-smooth);
 }
