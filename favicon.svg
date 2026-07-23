@@ -12,5 +12,5 @@
     <path d="M16 18.5v2.5" stroke="#0ea5e9" stroke-width="2.2" stroke-linecap="round" />
     
     <!-- W (Center - Rose/Accent) -->
-    <path d="M11.5 13l2.25 5 2.25-4 2.25 4 2.25-5" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M11.5 13l2.25 5 2.25-4 2.25 4 2.25-5" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
 </svg>
