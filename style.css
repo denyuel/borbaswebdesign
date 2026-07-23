@@ -286,7 +286,7 @@ button {
     text-decoration: none;
 }
 
-.logo span:first-of-type {
+.logo > span:first-of-type {
     font-family: 'Pinyon Script', cursive;
     font-size: 2.5rem;
     color: var(--color-primary) !important; /* Forest Teal */
