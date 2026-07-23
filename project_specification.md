@@ -65,7 +65,7 @@ $$\text{Végösszeg} = \text{Csomag Alapár} + \sum(\text{Kiegészítő Funkció
 
 A honlap egy egyoldalas (Single Page) struktúrára épül, amely horgonyokkal (`anchors`) vezeti a látogatót:
 
-1.  **Header (Navigáció):** Logó (Borbás Webdesign - prémium két-tónusú DBW kör monogram ikon, és kétféleképpen kalligrafikus aláírás logó aláhúzás swoosh-sal), menüpontok, és egy kiemelt Kapcsolat gomb. Mobilon hamburgermenüvé alakul.
+1.  **Header (Navigáció):** Logó (Borbás Webdesign - prémium két-tónusú DBW kör monogram ikon, és kétféleképpen kalligrafikus aláírás logó a végéből kiinduló teljes szöveget bekarikázó ecsetvonásos hurokkal (flourish)), menüpontok, és egy kiemelt Kapcsolat gomb. Mobilon hamburgermenüvé alakul.
 2.  **Hero (Nyitó szekció):** Főcím kiemeléssel, meggyőző leírás, CTA gombok (kalkulátorhoz és kapcsolatfelvételhez), mellette a prémium multi-device (szalon-fókuszú) mockup kép.
 3.  **Szolgáltatások (Services):** 3 db prémium kártya (Webdesign, Programozás, Foglalási rendszer) tetejükön fekvő formátumú, esztétikus eszköz-mockup képekkel.
 4.  **Rólam (About):** Személyes bemutatkozás Dánielről, a jobb oldalon a generált téli stílusú, szürke zakós, hófehér inges profi portréval. Alatta a 3 fő ígéret (48 órás átadás, fix árak, support).

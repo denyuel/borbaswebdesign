@@ -286,7 +286,7 @@ button {
     text-decoration: none;
 }
 
-.logo > span:first-of-type {
+.logo-text-inner > span:first-of-type {
     font-family: 'Pinyon Script', cursive;
     font-size: 2.5rem;
     color: var(--color-primary) !important; /* Forest Teal */
@@ -309,18 +309,24 @@ button {
     vertical-align: middle;
 }
 
-.logo-text-group {
+.logo-text-wrap {
     position: relative;
     display: inline-flex;
     align-items: center;
+    padding: 6px 20px; /* spacing for the flourish circle overlap */
 }
 
-.logo-swoosh {
+.logo-text-inner {
+    display: flex;
+    align-items: center;
+}
+
+.logo-flourish {
     position: absolute;
-    bottom: -6px;
-    left: 6px;
-    width: 92%;
-    height: 12px;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 106%;
     pointer-events: none;
     z-index: 1;
 }
@@ -1832,8 +1838,8 @@ button {
 
 
 .logo-mark {
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
     flex-shrink: 0;
     transition: var(--transition-smooth);
 }
