@@ -310,28 +310,20 @@ button {
 }
 
 .logo-text-wrap {
-    position: relative;
     display: inline-flex;
     align-items: center;
-    padding: 10px 24px 28px 24px; /* safe spacing for circle overlap and vertical wiggle */
-    overflow: visible;
+    gap: 4px;
+    margin-left: 12px;
 }
 
-.logo-text-inner {
-    display: flex;
-    align-items: center;
-    margin-top: -12px; /* shift text slightly upward inside the block */
-}
-
-.logo-flourish {
-    position: absolute;
-    top: -6px;
-    left: 0;
-    width: 100%;
-    height: 100px; /* fixed height to let the squiggle extend downwards */
-    pointer-events: none;
-    z-index: 1;
-    overflow: visible; /* let the zig-zag overflow the header */
+.logo-text-wrap > span:first-of-type {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2.5rem;
+    color: var(--color-primary) !important; /* Forest Teal */
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -6px; /* align baseline */
 }
 
 .nav-menu {
@@ -1841,8 +1833,8 @@ button {
 
 
 .logo-mark {
-    width: 56px;
-    height: 56px;
+    width: 54px;
+    height: 54px;
     flex-shrink: 0;
     transition: var(--transition-smooth);
 }
