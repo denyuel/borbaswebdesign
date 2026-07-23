@@ -313,22 +313,25 @@ button {
     position: relative;
     display: inline-flex;
     align-items: center;
-    padding: 6px 20px; /* spacing for the flourish circle overlap */
+    padding: 10px 24px 28px 24px; /* safe spacing for circle overlap and vertical wiggle */
+    overflow: visible;
 }
 
 .logo-text-inner {
     display: flex;
     align-items: center;
+    margin-top: -12px; /* shift text slightly upward inside the block */
 }
 
 .logo-flourish {
     position: absolute;
-    top: -2px;
+    top: -6px;
     left: 0;
     width: 100%;
-    height: 106%;
+    height: 100px; /* fixed height to let the squiggle extend downwards */
     pointer-events: none;
     z-index: 1;
+    overflow: visible; /* let the zig-zag overflow the header */
 }
 
 .nav-menu {
@@ -1838,8 +1841,8 @@ button {
 
 
 .logo-mark {
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
     flex-shrink: 0;
     transition: var(--transition-smooth);
 }
