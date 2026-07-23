@@ -286,26 +286,36 @@ button {
     text-decoration: none;
 }
 
-.logo span {
+.logo span:first-of-type {
     color: var(--color-primary); /* Forest Teal */
 }
 
-.logo-script {
+.logo .logo-script {
     font-family: 'Caveat', cursive;
-    font-size: 1.9rem;
-    color: var(--color-secondary); /* Bright Sky Blue */
+    font-size: 1.95rem;
+    color: var(--color-secondary) !important; /* Bright Sky Blue */
     font-weight: 700;
     transform: rotate(-3deg);
     margin-left: 6px;
     display: inline-block;
+    position: relative;
+    z-index: 2;
 }
 
-.logo-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--color-secondary);
-    box-shadow: 0 0 10px var(--color-secondary);
+.logo-text-group {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-swoosh {
+    position: absolute;
+    bottom: -6px;
+    left: 6px;
+    width: 92%;
+    height: 12px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .nav-menu {
