@@ -277,53 +277,31 @@ button {
 }
 
 .logo {
-    font-family: var(--font-body);
-    font-size: 1.55rem;
-    font-weight: 800;
-    color: #0f172a; /* Slate color for text */
     display: flex;
     align-items: center;
     text-decoration: none;
+    height: 100%;
 }
 
-.logo-text-inner > span:first-of-type {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 2.5rem;
-    color: var(--color-primary) !important; /* Forest Teal */
-    font-weight: 400;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -6px; /* align baseline */
+.logo-img {
+    height: 44px; /* Perfectly sized inside navigation bar */
+    width: auto;
+    display: block;
+    object-fit: contain;
+    filter: invert(1) brightness(1.8); /* Invert black logo text to white on dark header */
+    transition: filter var(--transition-smooth), transform var(--transition-smooth);
 }
 
-.logo .logo-script {
-    font-family: 'Alex Brush', cursive;
-    font-size: 2.4rem;
-    color: var(--color-secondary) !important; /* Bright Sky Blue */
-    font-weight: 400;
-    transform: rotate(-2deg);
-    margin-left: -2px; /* overlap script tails elegantly */
-    display: inline-block;
-    position: relative;
-    z-index: 2;
-    vertical-align: middle;
+.logo:hover .logo-img {
+    transform: scale(1.03);
 }
 
-.logo-text-wrap {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-left: 12px;
+.header.scrolled .logo-img {
+    filter: none; /* Keep original black text on solid white scrolled header */
 }
 
-.logo-text-wrap > span:first-of-type {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 2.5rem;
-    color: var(--color-primary) !important; /* Forest Teal */
-    font-weight: 400;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -6px; /* align baseline */
+.footer .logo-img {
+    filter: invert(1) brightness(1.8); /* Always white on dark footer background */
 }
 
 .nav-menu {
@@ -1214,6 +1192,7 @@ button {
     pointer-events: none;
     transform: rotate(-10deg);
     z-index: 0;
+    filter: invert(1) brightness(1.8);
 }
 
 .calc-summary-header {
@@ -1832,13 +1811,4 @@ button {
 }
 
 
-.logo-mark {
-    width: 54px;
-    height: 54px;
-    flex-shrink: 0;
-    transition: var(--transition-smooth);
-}
-
-.logo:hover .logo-mark {
-    transform: rotate(6deg) scale(1.08);
-}
+/* Replaced by image logo styling rules */
