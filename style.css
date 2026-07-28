@@ -288,8 +288,8 @@ button {
     width: auto;
     display: block;
     object-fit: contain;
-    filter: invert(1) brightness(1.8); /* Invert black logo text to white on dark header */
-    transition: filter var(--transition-smooth), transform var(--transition-smooth);
+    /* Always display original black/blue colors since the site has a light background */
+    transition: transform var(--transition-smooth);
 }
 
 .logo:hover .logo-img {
@@ -297,12 +297,11 @@ button {
 }
 
 .header.scrolled .logo-img {
-    filter: none; /* Keep original black text on solid white scrolled header */
+    /* No filter needed, original dark gray text is perfect on solid white scrolled header */
 }
 
 .footer .logo-img {
-    filter: none; /* REVERT INVERT: Keep original black/blue colors on white footer background */
-    height: 60px; /* Equal sizing to the header, not shrunk down */
+    height: 60px; /* Equal sizing in the footer */
 }
 
 .nav-menu {
@@ -1193,7 +1192,7 @@ button {
     pointer-events: none;
     transform: rotate(-10deg);
     z-index: 0;
-    filter: invert(1) brightness(1.8);
+    /* Original dark color at very low opacity works perfectly on the light summary panel background */
 }
 
 .calc-summary-header {
