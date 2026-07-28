@@ -1512,17 +1512,24 @@ button {
 }
 
 .guarantee-icon {
-    font-size: 1.5rem;
-    background: rgba(var(--color-primary-rgb), 0.1);
-    width: 46px;
-    height: 46px;
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    box-shadow: 0 0 10px var(--color-primary);
+    margin-top: 8px; /* align with first line of h4 */
     flex-shrink: 0;
-    color: var(--color-primary);
-    box-shadow: 0 0 15px rgba(var(--color-primary-rgb), 0.1);
+    display: inline-block;
+}
+
+.guarantee-item:nth-child(2) .guarantee-icon {
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary);
+}
+
+.guarantee-item:nth-child(3) .guarantee-icon {
+    background-color: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
 }
 
 .guarantee-item h4 {
