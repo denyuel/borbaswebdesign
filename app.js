@@ -392,13 +392,20 @@ document.addEventListener('DOMContentLoaded', () => {
             // Collect Form Data
             const formData = new FormData(contactForm);
             
+            // Convert FormData to JSON object for FormSubmit AJAX API
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
             // Send to FormSubmit using Daniel's email routing
             fetch('https://formsubmit.co/ajax/daniel.borbas@borbaswebdesign.hu', {
                 method: 'POST',
-                body: formData,
                 headers: {
+                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
-                }
+                },
+                body: JSON.stringify(data)
             })
             .then(response => response.json())
             .then(data => {
