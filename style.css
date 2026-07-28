@@ -284,7 +284,7 @@ button {
 }
 
 .logo-img {
-    height: 44px; /* Perfectly sized inside navigation bar */
+    height: 60px; /* Generous prominent height, not shrunk down */
     width: auto;
     display: block;
     object-fit: contain;
@@ -301,7 +301,8 @@ button {
 }
 
 .footer .logo-img {
-    filter: invert(1) brightness(1.8); /* Always white on dark footer background */
+    filter: none; /* REVERT INVERT: Keep original black/blue colors on white footer background */
+    height: 60px; /* Equal sizing to the header, not shrunk down */
 }
 
 .nav-menu {
