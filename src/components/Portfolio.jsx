@@ -4,10 +4,10 @@ const projects = [
     {
         id: 'winery',
         img: '/portfolio-winery.png?v=3',
-        badge: 'Modern arculat & integrált fizetés',
-        category: 'Egyedi Webshop (E-commerce)',
+        badge: 'Egyedi design & borkatalógus',
+        category: 'Bemutatkozó oldal & Borkatalógus',
         title: 'Wine&Sofi',
-        desc: 'Prémium badacsonyi butikborászat egyedi tervezésű weboldala online borrendelési lehetőséggel.',
+        desc: 'Prémium badacsonyi butikborászat egyedi tervezésű weboldala, hangulatos bemutatkozással és digitális termékkatalógussal.',
         url: 'https://wineandsofi.hu'
     },
     {
