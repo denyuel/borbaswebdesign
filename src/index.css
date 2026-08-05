@@ -63,6 +63,8 @@ html {
 body {
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 
@@ -1857,6 +1859,11 @@ select.form-input {
         padding: 32px;
     }
     
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+        gap: 24px;
+    }
+    
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 48px;
@@ -1897,6 +1904,16 @@ select.form-input {
 @media (max-width: 768px) {
     .section-padding {
         padding: 32px 0;
+    }
+    
+    .calc-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .calc-features-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
     
     .hero {
@@ -2041,11 +2058,6 @@ select.form-input {
         gap: 24px;
     }
     
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-    
     .calculator-container {
         padding: 24px 16px;
     }
@@ -2057,16 +2069,6 @@ select.form-input {
     .calc-card::after {
         top: 16px;
         right: 16px;
-    }
-    
-    .calc-features-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    
-    .calc-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
     }
     
     .calc-price-value {
