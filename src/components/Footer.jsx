@@ -13,7 +13,7 @@ export default function Footer() {
                         <p style={{ margin: 0 }}>© 2026 Borbás Webdesign. Minden jog fenntartva.</p>
                     </div>
                     
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }} className="footer-contact-wrap">
                         <span style={{ fontSize: '0.9rem', color: 'var(--text-gray-light)' }}>Kapcsolat:</span>
                         <div className="social-links">
                             {/* Email Link */}
