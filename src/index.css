@@ -1996,6 +1996,7 @@ select.form-input {
         overflow: visible !important;
         display: flex;
         flex-direction: column;
+        background: transparent !important;
     }
     
     .portfolio-details-drawer {
@@ -2008,7 +2009,13 @@ select.form-input {
         height: auto !important;
         border-bottom-left-radius: var(--radius-xl);
         border-bottom-right-radius: var(--radius-xl);
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
         border-top: 1px solid var(--border-subtle);
+    }
+
+    .portfolio-details-drawer .drawer-close-btn {
+        display: none !important;
     }
 
     .portfolio-details-drawer h4,
@@ -2065,28 +2072,36 @@ select.form-input {
     }
     
     .social-links {
-        flex-direction: column !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
         align-items: center !important;
+        flex-wrap: wrap !important;
         width: 100% !important;
         gap: 12px !important;
     }
     
     .social-links a.social-link {
-        width: 100% !important;
-        max-width: 290px !important;
+        width: auto !important;
+        max-width: 100% !important;
     }
     
     .social-links a.social-link[href^="mailto:"] {
-        font-size: 0.76rem !important;
-        padding: 0 8px !important;
-        white-space: normal !important;
-        word-break: break-all !important;
+        font-size: 0.72rem !important;
+        padding: 0 12px !important;
+        white-space: nowrap !important;
         text-align: center !important;
-        height: auto !important;
-        min-height: 40px !important;
+        height: 40px !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
+        border-radius: var(--radius-pill) !important;
+    }
+
+    .social-links a.social-link:not([href^="mailto:"]) {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: var(--radius-md) !important;
     }
     
     .calculator-container {
