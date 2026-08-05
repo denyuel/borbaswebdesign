@@ -7,7 +7,8 @@ const projects = [
         badge: 'Modern arculat & integrált fizetés',
         category: 'Egyedi Webshop (E-commerce)',
         title: 'Wine&Sofi',
-        desc: 'Prémium badacsonyi butikborászat egyedi tervezésű weboldala online borrendelési lehetőséggel.'
+        desc: 'Prémium badacsonyi butikborászat egyedi tervezésű weboldala online borrendelési lehetőséggel.',
+        url: 'https://wineandsofi.hu'
     },
     {
         id: 'hotel',
@@ -15,7 +16,8 @@ const projects = [
         badge: '180° balatoni panoráma',
         category: 'Bemutatkozó & Foglalási oldal',
         title: 'Vine&Roof',
-        desc: 'Panorámás badacsonyi vendégház bemutató oldala digitális detox élménnyel.'
+        desc: 'Panorámás badacsonyi vendégház bemutató oldala digitális detox élménnyel.',
+        url: 'https://vineandroof.hu'
     },
     {
         id: 'bettina',
@@ -23,7 +25,8 @@ const projects = [
         badge: 'Esemény & Személyes Márka',
         category: 'Egyedi Eseményoldal & Blog',
         title: 'bettinabalazs.com',
-        desc: 'Balázs Bettina egyedi tervezésű személyes márkája és eseményszervező portálja hawaii életérzéssel.'
+        desc: 'Balázs Bettina egyedi tervezésű személyes márkája és eseményszervező portálja hawaii életérzéssel.',
+        url: 'https://bettinabalazs.com'
     },
     {
         id: 'farm',
@@ -31,7 +34,8 @@ const projects = [
         badge: 'Egyedi kalkulátor integráció',
         category: 'Szolgáltatás-bemutató Landing Page',
         title: 'Szántóföldi Öntözés',
-        desc: 'Öntözéstechnikai szolgáltatások bemutató oldala egyedi, interaktív vízigény-kalkulátorral.'
+        desc: 'Öntözéstechnikai szolgáltatások bemutató oldala egyedi, interaktív vízigény-kalkulátorral.',
+        url: 'https://szantofoldiontozes.hu'
     },
     {
         id: 'cosmetics',
@@ -39,7 +43,8 @@ const projects = [
         badge: 'Online időpontfoglalóval',
         category: 'Szalon & Időpontfoglaló Oldal',
         title: 'Százszorszép Kozmetika',
-        desc: 'Elegáns szépségszalon weboldala beépített online naptárral és interaktív kezelési katalógussal.'
+        desc: 'Elegáns szépségszalon weboldala beépített online naptárral és interaktív kezelési katalógussal.',
+        url: 'https://szazszorszepkozmetika.hu'
     }
 ];
 
@@ -136,13 +141,26 @@ export default function Portfolio({ onContactClick }) {
                                             <span className="portfolio-category">{project.category}</span>
                                             <h4>{project.title}</h4>
                                             <p>{project.desc}</p>
-                                            <button 
-                                                className="btn-primary" 
-                                                style={{ marginTop: '16px', alignSelf: 'flex-start', padding: '10px 20px', fontSize: '0.85rem' }}
-                                                onClick={() => onContactClick(project.title)}
-                                            >
-                                                Hasonló oldalt szeretnék &rarr;
-                                            </button>
+                                            <div style={{ display: 'flex', gap: '10px', marginTop: '16px', flexWrap: 'wrap' }}>
+                                                {project.url && (
+                                                    <a 
+                                                        href={project.url} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer" 
+                                                        className="btn-primary" 
+                                                        style={{ padding: '10px 16px', fontSize: '0.85rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                                                    >
+                                                        Weboldal megtekintése &rarr;
+                                                    </a>
+                                                )}
+                                                <button 
+                                                    className="btn-secondary" 
+                                                    style={{ padding: '10px 16px', fontSize: '0.85rem' }}
+                                                    onClick={() => onContactClick(project.title)}
+                                                >
+                                                    Hasonló oldalt szeretnék &rarr;
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                     
