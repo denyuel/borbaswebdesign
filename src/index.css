@@ -2146,5 +2146,11 @@ select.form-input {
     }
 }
 
+@media (max-width: 360px) {
+    .footer-contact-wrap {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+}
 
 /* Replaced by image logo styling rules */
