@@ -164,20 +164,21 @@ export default function Portfolio({ onContactClick }) {
                                         </div>
                                     </div>
                                     
-                                    <div 
+                                    <button 
                                         className="portfolio-card-toggle"
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             setActiveDrawer(activeDrawer === idx ? null : idx);
                                         }}
+                                        type="button"
                                     >
-                                        <span className="toggle-text">
+                                        <span className="toggle-text" style={{ pointerEvents: 'none' }}>
                                             {activeDrawer === idx ? 'Bezárás' : 'Részletek'}
                                         </span>
-                                        <span className="toggle-icon">
+                                        <span className="toggle-icon" style={{ pointerEvents: 'none' }}>
                                             {activeDrawer === idx ? '−' : '+'}
                                         </span>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                         ))}
