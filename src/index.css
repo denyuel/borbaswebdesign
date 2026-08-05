@@ -1962,7 +1962,7 @@ button {
         flex-direction: column;
     }
     
-    .portfolio-hover-overlay {
+    .portfolio-details-drawer {
         position: relative !important;
         opacity: 1 !important;
         background: rgba(255, 255, 255, 0.02) !important;
@@ -1975,34 +1975,38 @@ button {
         border-top: 1px solid var(--border-subtle);
     }
 
-    .portfolio-hover-overlay h4,
-    .portfolio-hover-overlay p,
-    .portfolio-hover-overlay .portfolio-category,
-    .portfolio-hover-overlay .portfolio-badge {
+    .portfolio-details-drawer h4,
+    .portfolio-details-drawer p,
+    .portfolio-details-drawer .portfolio-category,
+    .portfolio-details-drawer .portfolio-badge {
         transform: none !important;
         opacity: 1 !important;
     }
 
-    .portfolio-hover-overlay .portfolio-category {
+    .portfolio-details-drawer .portfolio-category {
         color: #0369a1 !important;
     }
     
-    .portfolio-hover-overlay .portfolio-badge {
+    .portfolio-details-drawer .portfolio-badge {
         background: rgba(3, 105, 161, 0.08) !important;
         border-color: rgba(3, 105, 161, 0.25) !important;
         color: #0369a1 !important;
     }
     
-    .portfolio-hover-overlay h4 {
+    .portfolio-details-drawer h4 {
         font-size: 1.25rem !important;
         margin-top: 4px;
     }
 
-    .portfolio-hover-overlay p {
+    .portfolio-details-drawer p {
         margin-bottom: 16px !important;
         color: var(--text-gray) !important;
     }
     
+    .portfolio-card-toggle {
+        display: none !important;
+    }
+
     .portfolio-link {
         align-self: flex-start;
     }
