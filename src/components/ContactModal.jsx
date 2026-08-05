@@ -33,7 +33,7 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
         };
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/borbasdaniel17@gmail.com", {
+            const response = await fetch("https://formsubmit.co/ajax/daniel.borbas@borbaswebdesign.hu", {
                 method: "POST",
                 headers: { 
                     'Content-Type': 'application/json',
@@ -48,10 +48,10 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
                 setEmail('');
                 setMessage('');
             } else {
-                alert("Hiba történt az üzenet küldése során. Kérlek próbáld újra, vagy írj közvetlenül a borbasdaniel17@gmail.com címre!");
+                alert("Hiba történt az üzenet küldése során. Kérlek próbáld újra, vagy írj közvetlenül a daniel.borbas@borbaswebdesign.hu címre!");
             }
         } catch (error) {
-            alert("Hálózati hiba történt. Kérlek ellenőrizd az internetkapcsolatod vagy írj közvetlenül a borbasdaniel17@gmail.com címre!");
+            alert("Hálózati hiba történt. Kérlek ellenőrizd az internetkapcsolatod vagy írj közvetlenül a daniel.borbas@borbaswebdesign.hu címre!");
         } finally {
             setIsSubmitting(false);
         }
