@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Logo from './Logo';
 
 export default function Navbar({ onContactClick }) {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,9 +24,7 @@ export default function Navbar({ onContactClick }) {
     return (
         <header className={`header ${isScrolled ? 'scrolled' : ''}`} id="header">
             <div className="container nav-container">
-                <a href="#hero" className="logo" id="logo-link">
-                    <img src="/logo_full.png" alt="Borbás Webdesign" className="logo-img" />
-                </a>
+                <Logo id="logo-link" />
                 
                 <nav>
                     <ul className="nav-menu" style={{ display: isMobileMenuOpen ? 'flex' : '' }}>
