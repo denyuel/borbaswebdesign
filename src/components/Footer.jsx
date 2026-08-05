@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="container footer-content" style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center' }}>
                 {/* Top Section: Logo & Socials */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }} className="footer-top-wrap">
+                <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'flex-start', flexWrap: 'wrap', gap: '20px' }} className="footer-top-wrap">
                     <div className="footer-logo">
                         <a href="#hero" className="logo">
                             <img src="/logo_full.png" alt="Borbás Webdesign" className="logo-img" />
