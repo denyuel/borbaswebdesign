@@ -89,7 +89,7 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
                                     type="email" 
                                     id="contact-email" 
                                     className="form-input" 
-                                    placeholder="Pl. daniel@borbaswebdesign.hu" 
+                                    placeholder="Pl. daniel.borbas@borbaswebdesign.hu" 
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required 
