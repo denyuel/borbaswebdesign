@@ -48,7 +48,7 @@ export default function Footer() {
                     <div style={{ fontSize: '0.78rem', color: 'var(--text-gray-dark)', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto' }}>
                         <strong>Egyéni vállalkozói adatok (Impresszum):</strong><br />
                         Szolgáltató: Borbás Dániel e.v. | Székhely: 6787 Zákányszék, Tanya 424. | Adószám: 52458655-1-26 | Nyilvántartási szám: 57851211<br />
-                        Főtevékenység: 620104 - Számítógépes programozás m.n.s. | Tárhelyszolgáltató: Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, USA, support@cloudflare.com)
+                        Főtevékenység: 621004 - Weblap tervezése (webdizájn) | Tárhelyszolgáltató: Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, USA, support@cloudflare.com)
                     </div>
                 </div>
             </div>
