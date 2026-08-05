@@ -8,7 +8,7 @@ const projects = [
         category: 'Bemutatkozó oldal & Borkatalógus',
         title: 'Wine&Sofi',
         desc: 'Prémium badacsonyi butikborászat egyedi tervezésű weboldala, hangulatos bemutatkozással és digitális termékkatalógussal.',
-        url: 'https://wineandsofi.hu'
+        url: 'https://winesofi.hu'
     },
     {
         id: 'hotel',
@@ -17,7 +17,7 @@ const projects = [
         category: 'Bemutatkozó & Foglalási oldal',
         title: 'Vine&Roof',
         desc: 'Panorámás badacsonyi vendégház bemutató oldala digitális detox élménnyel.',
-        url: 'https://vineandroof.hu'
+        url: 'https://vineroof.hu'
     },
     {
         id: 'bettina',
@@ -44,7 +44,7 @@ const projects = [
         category: 'Szalon & Időpontfoglaló Oldal',
         title: 'Százszorszép Kozmetika',
         desc: 'Elegáns szépségszalon weboldala beépített online naptárral és interaktív kezelési katalógussal.',
-        url: 'https://szazszorszepkozmetika.hu'
+        url: 'https://szazszorszep-kozmetika.hu'
     }
 ];
 
@@ -52,6 +52,29 @@ export default function Portfolio({ onContactClick }) {
     const [currentIndex, setCurrentIndex] = useState(5);
     const [useTransition, setUseTransition] = useState(true);
     const [activeDrawer, setActiveDrawer] = useState(null); // stores active card index
+    const touchStart = React.useRef(0);
+    const touchEnd = React.useRef(0);
+
+    const handleTouchStart = (e) => {
+        touchStart.current = e.targetTouches[0].clientX;
+        touchEnd.current = e.targetTouches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        touchEnd.current = e.targetTouches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        const distance = touchStart.current - touchEnd.current;
+        const isLeftSwipe = distance > 50;
+        const isRightSwipe = distance < -50;
+
+        if (isLeftSwipe) {
+            slideNext();
+        } else if (isRightSwipe) {
+            slidePrev();
+        }
+    };
 
     useEffect(() => {
         if (!useTransition) {
@@ -107,7 +130,12 @@ export default function Portfolio({ onContactClick }) {
                 </div>
                 
                 <div className="portfolio-carousel-wrapper">
-                    <div className="portfolio-carousel-viewport">
+                    <div 
+                        className="portfolio-carousel-viewport"
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}
+                    >
                         <div 
                             className="portfolio-carousel-track"
                             onTransitionEnd={handleTransitionEnd}
