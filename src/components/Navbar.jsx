@@ -27,7 +27,7 @@ export default function Navbar({ onContactClick }) {
                 <Logo id="logo-link" />
                 
                 <nav>
-                    <ul className="nav-menu" style={{ display: isMobileMenuOpen ? 'flex' : '' }}>
+                    <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
                         <li><a href="#hero" className="nav-link active" onClick={() => setIsMobileMenuOpen(false)}>Főoldal</a></li>
                         <li><a href="#szolgaltatasok" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Szolgáltatások</a></li>
                         <li><a href="#referenciak" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Referenciák</a></li>
