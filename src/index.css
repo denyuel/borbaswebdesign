@@ -1904,6 +1904,10 @@ select.form-input {
         padding: 32px 0;
     }
     
+    .logo-img {
+        height: 44px;
+    }
+    
     .footer-top-wrap {
         flex-direction: column !important;
         align-items: center !important;
@@ -2064,6 +2068,19 @@ select.form-input {
     
     .section-title {
         font-size: 1.5rem;
+    }
+    
+    .logo-img {
+        height: 36px;
+    }
+    
+    .header .btn-primary.trigger-contact {
+        padding: 8px 12px !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .header .btn-primary.trigger-contact .arrow {
+        display: none !important;
     }
     
     .portfolio-grid {
