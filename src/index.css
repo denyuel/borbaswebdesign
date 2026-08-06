@@ -870,7 +870,7 @@ button {
     position: relative;
     width: 100%;
     overflow: visible; /* Let cards slide out elegantly but clipped by parent container padding */
-    padding: 20px 0 40px;
+    padding: 20px 48px 40px;
     --carousel-cols: 3;
 }
 
@@ -968,16 +968,20 @@ button {
     padding: 24px;
     z-index: 15;
     transform: translateY(100%);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease;
     opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    pointer-events: none;
+    visibility: hidden;
 }
 
 .portfolio-details-drawer.active {
     transform: translateY(0);
     opacity: 1;
+    pointer-events: auto !important;
+    visibility: visible !important;
 }
 
 .drawer-close-btn {
@@ -1092,11 +1096,11 @@ button {
 }
 
 .carousel-arrow.prev-btn {
-    left: -24px;
+    left: 0px;
 }
 
 .carousel-arrow.next-btn {
-    right: -24px;
+    right: 0px;
 }
 
 .carousel-dots {
@@ -1125,6 +1129,9 @@ button {
 }
 
 @media (max-width: 900px) {
+    .portfolio-carousel-wrapper {
+        padding: 20px 0px 40px !important;
+    }
     .carousel-arrow {
         display: none !important;
     }
