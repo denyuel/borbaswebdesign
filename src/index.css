@@ -2118,6 +2118,18 @@ select.form-input {
         display: flex;
         flex-direction: column;
         background: transparent !important;
+        aspect-ratio: auto !important;
+    }
+
+    .portfolio-img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1.82 !important;
+        object-fit: cover !important;
+        border-top-left-radius: var(--radius-xl) !important;
+        border-top-right-radius: var(--radius-xl) !important;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
     }
     
     .portfolio-details-drawer {
