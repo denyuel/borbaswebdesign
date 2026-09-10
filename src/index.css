@@ -900,7 +900,7 @@ button {
     position: relative;
     padding: 0 !important;
     overflow: hidden;
-    border-radius: var(--radius-xl);
+    border-radius: 18px;
     background: var(--surface-card);
     transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.1s ease;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
@@ -936,19 +936,20 @@ button {
 .portfolio-image-wrap {
     position: relative;
     width: 100%;
-    aspect-ratio: 1.36;
+    aspect-ratio: 1.82;
     overflow: hidden;
     background: #090d16;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--radius-lg);
+    border-radius: 18px;
 }
 
 .portfolio-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     transition: var(--transition-smooth);
 }
 
@@ -964,8 +965,8 @@ button {
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.98);
-    border-radius: var(--radius-xl);
-    padding: 16px 18px;
+    border-radius: 18px;
+    padding: 12px 16px;
     z-index: 15;
     transform: translateY(100%);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease;
@@ -1024,11 +1025,11 @@ button {
 
 .portfolio-badge {
     align-self: flex-start;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 700;
-    padding: 3px 8px;
+    padding: 2px 7px;
     border-radius: var(--radius-sm);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     background: rgba(13, 148, 136, 0.08);
     border: 1px solid rgba(13, 148, 136, 0.25);
     color: var(--color-primary);
@@ -1038,39 +1039,39 @@ button {
 }
 
 .portfolio-category {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 600;
     color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     line-height: 1.2;
 }
 
 .drawer-content h4 {
-    font-size: 1.2rem;
-    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
     color: #0f172a;
     font-family: var(--font-body);
     font-weight: 700;
-    line-height: 1.25;
+    line-height: 1.2;
 }
 
 .drawer-content p {
-    font-size: 0.8rem;
+    font-size: 0.76rem;
     color: #475569;
-    line-height: 1.4;
-    margin: 0 0 8px 0;
+    line-height: 1.35;
+    margin: 0 0 6px 0;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
 .portfolio-drawer-actions {
     display: flex;
-    gap: 8px;
-    margin-top: 8px;
+    gap: 6px;
+    margin-top: 6px;
     flex-wrap: wrap;
 }
 
