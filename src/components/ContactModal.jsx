@@ -47,6 +47,15 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
                 setName('');
                 setEmail('');
                 setMessage('');
+                
+                // Track Meta Pixel Lead Conversion
+                if (typeof window !== 'undefined' && window.fbq) {
+                    window.fbq('track', 'Lead', {
+                        content_name: projectType,
+                        content_category: 'Webdesign Quote',
+                        currency: 'HUF'
+                    });
+                }
             } else {
                 alert("Hiba történt az üzenet küldése során. Kérlek próbáld újra, vagy írj közvetlenül a daniel.borbas@borbaswebdesign.hu címre!");
             }

@@ -141,7 +141,14 @@ export default function Calculator({ onCtaClick }) {
         if (selectedFeatures.length > 0) {
             message += `Érdekelne az árajánlat az alábbi extra opciókkal:\n- ${selectedFeatures.map(f => featureNames[f]).join('\n- ')}\n\n`;
         }
-        message += `Konzultáció / Találkozó: ${meetingNames[selectedMeeting]}`;
+        // Track Meta Pixel Calculator Engagement
+        if (typeof window !== 'undefined' && window.fbq) {
+            window.fbq('track', 'CustomizeProduct', {
+                content_name: selectedType,
+                value: totalPrice,
+                currency: 'HUF'
+            });
+        }
 
         onCtaClick(selectedType, message);
     };
