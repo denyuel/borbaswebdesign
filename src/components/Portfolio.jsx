@@ -169,21 +169,21 @@ export default function Portfolio({ onContactClick }) {
                                             <span className="portfolio-category">{project.category}</span>
                                             <h4>{project.title}</h4>
                                             <p>{project.desc}</p>
-                                            <div style={{ display: 'flex', gap: '10px', marginTop: '16px', flexWrap: 'wrap' }}>
+                                            <div className="portfolio-drawer-actions">
                                                 {project.url && (
                                                     <a 
                                                         href={project.url} 
                                                         target="_blank" 
                                                         rel="noopener noreferrer" 
                                                         className="btn-primary" 
-                                                        style={{ padding: '10px 16px', fontSize: '0.85rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                                                        style={{ padding: '8px 14px', fontSize: '0.8rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                                                     >
                                                         Weboldal megtekintése &rarr;
                                                     </a>
                                                 )}
                                                 <button 
                                                     className="btn-secondary" 
-                                                    style={{ padding: '10px 16px', fontSize: '0.85rem' }}
+                                                    style={{ padding: '8px 14px', fontSize: '0.8rem' }}
                                                     onClick={() => onContactClick(project.title)}
                                                 >
                                                     Hasonló oldalt szeretnék &rarr;
