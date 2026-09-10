@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import HeroAnimation from '../components/HeroAnimation';
 import AboutSection from '../components/AboutSection';
@@ -24,6 +24,34 @@ export default function Index() {
     const closeContact = () => {
         setIsContactOpen(false);
     };
+
+    useEffect(() => {
+        const scrollToHash = () => {
+            const hash = window.location.hash;
+            if (hash) {
+                if (hash === '#kapcsolat' || hash === '#ajanlatkeres' || hash === '#ajanlat') {
+                    openContact('landing', '');
+                    return;
+                }
+                const target = document.querySelector(hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        };
+
+        // Scroll immediately, and also retry shortly after React components finish mounting and images paint
+        scrollToHash();
+        const t1 = setTimeout(scrollToHash, 150);
+        const t2 = setTimeout(scrollToHash, 500);
+
+        window.addEventListener('hashchange', scrollToHash);
+        return () => {
+            clearTimeout(t1);
+            clearTimeout(t2);
+            window.removeEventListener('hashchange', scrollToHash);
+        };
+    }, []);
 
     return (
         <>

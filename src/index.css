@@ -60,6 +60,10 @@ html {
     overflow-x: hidden;
 }
 
+section[id] {
+    scroll-margin-top: 90px;
+}
+
 body {
     position: relative;
     min-height: 100vh;
