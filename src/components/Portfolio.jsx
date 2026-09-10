@@ -176,17 +176,15 @@ export default function Portfolio({ onContactClick }) {
                                                         target="_blank" 
                                                         rel="noopener noreferrer" 
                                                         className="btn-primary" 
-                                                        style={{ padding: '8px 14px', fontSize: '0.8rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                                                     >
-                                                        Weboldal megtekintése &rarr;
+                                                        Megtekintés &rarr;
                                                     </a>
                                                 )}
                                                 <button 
                                                     className="btn-secondary" 
-                                                    style={{ padding: '8px 14px', fontSize: '0.8rem' }}
                                                     onClick={() => onContactClick(project.title)}
                                                 >
-                                                    Hasonló oldalt szeretnék &rarr;
+                                                    Ajánlatkérés &rarr;
                                                 </button>
                                             </div>
                                         </div>
