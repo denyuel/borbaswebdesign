@@ -48,13 +48,17 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
                 setEmail('');
                 setMessage('');
                 
-                // Track Meta Pixel Lead Conversion
-                if (typeof window !== 'undefined' && window.fbq) {
-                    window.fbq('track', 'Lead', {
-                        content_name: projectType,
-                        content_category: 'Webdesign Quote',
-                        currency: 'HUF'
-                    });
+                // Track Meta Pixel Lead Conversion safely
+                try {
+                    if (typeof window !== 'undefined' && window.fbq) {
+                        window.fbq('track', 'Lead', {
+                            content_name: projectType,
+                            content_category: 'Webdesign Quote',
+                            currency: 'HUF'
+                        });
+                    }
+                } catch (err) {
+                    console.warn('Pixel lead tracking notice:', err);
                 }
             } else {
                 alert("Hiba történt az üzenet küldése során. Kérlek próbáld újra, vagy írj közvetlenül a daniel.borbas@borbaswebdesign.hu címre!");
