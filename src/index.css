@@ -2333,4 +2333,101 @@ select.form-input {
     }
 }
 
-/* Replaced by image logo styling rules */
+/* --- MODULAR CRO & STICKY ACTION BAR --- */
+.calc-trust-reassurance {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 12px;
+    text-align: center;
+    align-items: center;
+}
+
+.calc-trust-item {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-gray);
+    letter-spacing: 0.02em;
+}
+
+.modal-trust-reassurance {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-gray);
+}
+
+/* Sticky Bar is desktop-hidden by default */
+.calc-sticky-bar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .calc-sticky-bar {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: var(--surface-glass-bright);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid var(--border-subtle);
+        box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.08);
+        z-index: 990;
+        padding: 10px 16px;
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+        transform: translateY(120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    }
+
+    .calc-sticky-bar.is-visible {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .calc-sticky-bar__inner {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .calc-sticky-bar__info {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .calc-sticky-bar__label {
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-gray);
+    }
+
+    .calc-sticky-bar__price {
+        font-family: var(--font-heading);
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--color-primary);
+        white-space: nowrap;
+    }
+
+    .calc-sticky-bar__btn {
+        flex-shrink: 0;
+        padding: 10px 18px !important;
+        font-size: 0.82rem !important;
+        white-space: nowrap;
+        border-radius: var(--radius-md) !important;
+        box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25) !important;
+    }
+}

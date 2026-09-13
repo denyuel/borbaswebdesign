@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import CalculatorStickyBar from './CalculatorStickyBar';
 
 const basePrices = {
     landing: 150000,
@@ -63,6 +64,23 @@ export default function Calculator({ onCtaClick }) {
     });
 
     const [displayPrice, setDisplayPrice] = useState(150000);
+    const [isStickyVisible, setIsStickyVisible] = useState(false);
+    const calcRef = useRef(null);
+
+    useEffect(() => {
+        const el = calcRef.current;
+        if (!el || typeof IntersectionObserver === 'undefined') return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsStickyVisible(entry.isIntersecting);
+            },
+            { threshold: 0.08 }
+        );
+
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
 
     const targetPrice = basePrices[selectedType] + 
         selectedFeatures.reduce((sum, f) => sum + featurePrices[f], 0) + 
@@ -162,7 +180,7 @@ export default function Calculator({ onCtaClick }) {
     };
 
     return (
-        <section className="section-padding" id="kalkulator">
+        <section className="section-padding" id="kalkulator" ref={calcRef}>
             <div className="container">
                 <div className="section-title-wrap">
                     <span className="badge">Interaktív Kalkulátor</span>
@@ -402,17 +420,27 @@ export default function Calculator({ onCtaClick }) {
                             </ul>
                             
                             <button 
-                                className="btn-primary" 
+                                className="btn-primary calc-submit-btn" 
                                 id="calc-cta-btn" 
                                 style={{ width: '100%', justifyContent: 'center' }}
                                 onClick={handleCalculatorSubmit}
                             >
-                                Ajánlatot kérek ezen adatokkal <span className="arrow">→</span>
+                                Kérem a kalkulációt &amp; visszahívást <span className="arrow">→</span>
                             </button>
+                            <div className="calc-trust-reassurance">
+                                <span className="calc-trust-item">🔒 100% ingyenes &amp; kötelezettségmentes</span>
+                                <span className="calc-trust-item">⚡ 24 órán belül visszahívlak</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <CalculatorStickyBar 
+                displayPrice={displayPrice}
+                onCtaClick={handleCalculatorSubmit}
+                isVisible={isStickyVisible}
+            />
         </section>
     );
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 export default function ContactModal({ isOpen, onClose, defaultProject, defaultMessage }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [projectType, setProjectType] = useState('landing');
     const [message, setMessage] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,6 +26,7 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
         const data = {
             Név: name,
             Email: email,
+            Telefonszám: phone || 'Nem adott meg',
             "Projekt Típusa": projectType,
             Üzenet: message,
             _honey: '',
@@ -46,6 +48,7 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
                 setIsSuccess(true);
                 setName('');
                 setEmail('');
+                setPhone('');
                 setMessage('');
                 
                 // Track Meta Pixel Lead Conversion safely
@@ -108,6 +111,18 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
                                     required 
                                 />
                             </div>
+
+                            <div className="form-group">
+                                <label htmlFor="contact-phone" className="form-label">Telefonszám (opcionális a gyors visszahíváshoz)</label>
+                                <input 
+                                    type="tel" 
+                                    id="contact-phone" 
+                                    className="form-input" 
+                                    placeholder="Pl. +36 30 123 4567" 
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                />
+                            </div>
                             
                             <div className="form-group">
                                 <label htmlFor="contact-project" className="form-label">Projekt Típusa</label>
@@ -136,8 +151,11 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
                             </div>
                             
                             <button type="submit" className="btn-primary form-submit-btn" disabled={isSubmitting}>
-                                {isSubmitting ? 'Küldés folyamatban...' : <>Üzenet elküldése <span className="arrow">→</span></>}
+                                {isSubmitting ? 'Küldés folyamatban...' : <>Ingyenes ajánlatkérés küldése <span className="arrow">→</span></>}
                             </button>
+                            <div className="modal-trust-reassurance">
+                                <span>🔒 100% ingyenes &amp; kötelezettségmentes • 24 órán belül visszahívlak</span>
+                            </div>
                         </form>
                     </div>
                 ) : (
