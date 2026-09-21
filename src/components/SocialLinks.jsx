@@ -27,7 +27,7 @@ export default function SocialLinks() {
 
             {/* Instagram Link */}
             <a 
-                href="https://www.instagram.com/denyuel" 
+                href="https://www.instagram.com/borbaswebdesign" 
                 className="social-link" 
                 title="Kövess Instagramon!"
                 target="_blank"
