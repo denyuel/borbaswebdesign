@@ -57,11 +57,11 @@ export default function Calculator({ onCtaClick }) {
     const [selectedFeatures, setSelectedFeatures] = useState([]);
     const [selectedMeeting, setSelectedMeeting] = useState('online');
     
-    const [openGroups, setOpenGroups] = useState(() => ({
+    const [openGroups, setOpenGroups] = useState({
         type: true,
-        features: typeof window !== 'undefined' ? window.innerWidth > 768 : true,
+        features: false,
         meeting: false
-    }));
+    });
 
     const [displayPrice, setDisplayPrice] = useState(150000);
     const [isStickyVisible, setIsStickyVisible] = useState(false);
