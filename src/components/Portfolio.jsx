@@ -20,13 +20,13 @@ const projects = [
         url: 'https://vineroof.hu'
     },
     {
-        id: 'bettina',
-        img: '/portfolio-bettina.png?v=1',
-        badge: 'Esemény & Személyes Márka',
-        category: 'Egyedi Eseményoldal & Blog',
-        title: 'bettinabalazs.com',
-        desc: 'Balázs Bettina egyedi tervezésű személyes márkája és eseményszervező portálja hawaii életérzéssel.',
-        url: 'https://bettinabalazs.com'
+        id: 'funkcionalistest',
+        img: '/portfolio-funkcionalistest.png?v=1',
+        badge: 'Craniosacralis & Rehabilitáció',
+        category: 'Egészség & Terápiás Weboldal',
+        title: 'FunkcionálisTest',
+        desc: 'Prémium terápiás és rehabilitációs weboldal Craniosacralis kezelésekkel, Balance² mozgással és online időpontfoglalással.',
+        url: 'https://funkcionalistest.hu'
     },
     {
         id: 'farm',
