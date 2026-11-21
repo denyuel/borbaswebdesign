@@ -262,15 +262,16 @@ button {
     left: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--border-subtle);
     transition: var(--transition-smooth);
 }
 
-.header.scrolled {
-    background: rgba(255, 255, 255, 0.96);
+.header.scrolled,
+.header.menu-open {
+    background: #ffffff;
     border-bottom: 1px solid var(--border-subtle);
     box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
 }
@@ -313,15 +314,16 @@ button {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 32px;
+    gap: 24px;
 }
 
 .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: var(--text-gray);
     position: relative;
     padding: 8px 0;
+    white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -487,6 +489,12 @@ button {
     font-size: 0.86rem;
     font-weight: 600;
     color: var(--text-gray);
+}
+
+.trust-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 /* Floating Image Visual */
@@ -971,8 +979,8 @@ button {
     width: 100%;
     aspect-ratio: 1.82;
     overflow: hidden;
-    background: #f8fafc;
-    border-bottom: 1px solid #e2e8f0;
+    background: #f1f5f9;
+    border-bottom: 1px solid #cbd5e1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1063,7 +1071,7 @@ button {
 /* Carousel arrows */
 .carousel-arrow {
     position: absolute;
-    top: 45%;
+    top: calc(50% - 14px);
     transform: translateY(-50%);
     width: 48px;
     height: 48px;
@@ -1291,27 +1299,35 @@ button {
 }
 
 /* --- INTERACTIVE CALCULATOR (ÁRKALKULÁTOR) --- */
+#kalkulator.section-padding {
+    padding: 24px 0 44px;
+}
+
+#kalkulator .section-title-wrap {
+    margin-bottom: 20px;
+}
+
 .calculator-container {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 28px;
     background: var(--surface-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-xl);
-    padding: 48px;
+    padding: 32px 36px;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 }
 
 .calc-options-wrap h3 {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
 }
 
 .calc-group {
     border-bottom: 1px solid var(--border-subtle);
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
 }
 
 .calc-group:last-of-type {
@@ -1370,21 +1386,21 @@ button {
 /* Styled radio/checkbox cards */
 .calc-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
 }
 
 .calc-card {
     position: relative;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border-subtle);
-    padding: 20px 48px 20px 20px;
+    padding: 16px 38px 16px 16px;
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: var(--transition-fast);
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .calc-card:hover {
@@ -1395,10 +1411,10 @@ button {
 .calc-card::after {
     content: '';
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 20px;
-    height: 20px;
+    top: 16px;
+    right: 16px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     border: 2px solid var(--border-bright);
     background: transparent;
@@ -1422,7 +1438,7 @@ button {
     border-color: var(--color-primary);
     content: '✓';
     color: #ffffff;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -1431,22 +1447,27 @@ button {
 }
 
 .calc-card h4 {
-    font-size: 1rem;
+    font-size: 0.96rem;
     color: var(--text-white);
-    margin-right: 12px; /* Prevent text overlap with the checkmark */
+    margin-right: 8px;
     line-height: 1.3;
 }
 
 .calc-card p {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: var(--text-gray);
+    line-height: 1.45;
 }
 
 /* Features checklist */
 .calc-features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.calc-features-grid .calc-card:last-child {
+    grid-column: 1 / -1;
 }
 
 /* Pricing display */
@@ -1454,38 +1475,38 @@ button {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    padding: 24px;
+    padding: 22px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 14px;
     position: relative;
     overflow: hidden;
 }
 
 .calc-summary-watermark {
     position: absolute;
-    bottom: -15px;
-    right: -15px;
-    width: 140px;
-    height: 140px;
-    opacity: 0.035;
+    bottom: 12px;
+    right: 12px;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.04;
     pointer-events: none;
     transform: rotate(-10deg);
     z-index: 0;
-    /* Original dark color at very low opacity works perfectly on the light summary panel background */
 }
 
 .calc-summary-header {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .calc-price-display {
-    margin: 16px 0;
+    margin: 12px 0;
 }
 
 .calc-price-label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--text-gray);
@@ -1493,16 +1514,20 @@ button {
 
 .calc-price-value {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 2.35rem;
     font-weight: 800;
     color: var(--text-white);
-    margin-top: 8px;
+    margin-top: 6px;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
 }
 
 .calc-price-value span {
-    font-size: 1.5rem;
-    color: var(--color-secondary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
 }
 
 .calc-features-list {
@@ -1840,7 +1865,7 @@ select.form-input {
     margin: 0 auto;
 }
 
-/* --- CLOSING CTA SECTION --- */
+/* --- CLOSING CTA SECTION (NORDIC LIGHT HARMONIZED) --- */
 .closing-cta-section {
     padding-top: 16px;
     padding-bottom: 56px;
@@ -1848,12 +1873,13 @@ select.form-input {
 
 .closing-cta-card {
     position: relative;
-    background: #0f172a;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%);
+    border: 1px solid rgba(13, 148, 136, 0.22);
     border-radius: var(--radius-xl);
-    padding: 56px 40px;
+    padding: 52px 40px;
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06), 0 4px 16px rgba(13, 148, 136, 0.05);
 }
 
 .closing-cta-glow {
@@ -1863,7 +1889,7 @@ select.form-input {
     transform: translateX(-50%);
     width: 600px;
     height: 400px;
-    background: radial-gradient(circle, rgba(13, 148, 136, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.08) 0%, transparent 70%);
     pointer-events: none;
     z-index: 1;
 }
@@ -1876,12 +1902,14 @@ select.form-input {
 }
 
 .closing-cta-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     padding: 6px 16px;
     border-radius: var(--radius-full);
-    background: rgba(20, 184, 166, 0.15);
-    border: 1px solid rgba(45, 212, 191, 0.35);
-    color: #5eead4;
+    background: rgba(13, 148, 136, 0.1);
+    border: 1px solid rgba(13, 148, 136, 0.25);
+    color: var(--color-primary);
     font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1892,19 +1920,21 @@ select.form-input {
 .closing-cta-title {
     font-family: var(--font-heading);
     font-size: 2.2rem;
-    color: #ffffff;
+    color: #0f172a;
     line-height: 1.25;
     margin-bottom: 16px;
     letter-spacing: 0.03em;
 }
 
 .closing-cta-title span {
-    color: #2dd4bf;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .closing-cta-desc {
     font-size: 1.02rem;
-    color: #cbd5e1;
+    color: var(--text-gray);
     line-height: 1.6;
     margin-bottom: 32px;
 }
@@ -1923,17 +1953,19 @@ select.form-input {
     gap: 8px;
     padding: 13px 22px;
     border-radius: var(--radius-full);
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    color: #f8fafc;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     font-size: 0.9rem;
     font-weight: 600;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
     transition: var(--transition-fast);
 }
 
 .closing-cta-email:hover {
-    background: rgba(255, 255, 255, 0.14);
-    border-color: #2dd4bf;
+    background: #f8fafc;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
     transform: translateY(-2px);
 }
 
@@ -2012,12 +2044,12 @@ select.form-input {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%) contrast(1.06);
+    filter: none;
     transition: var(--transition-smooth);
 }
 
 .rolam-img:hover {
-    filter: grayscale(0%) contrast(1.0);
+    transform: scale(1.02);
 }
 
 .rolam-content {
@@ -2098,8 +2130,8 @@ select.form-input {
 }
 
 .guarantee-item:nth-child(3) .guarantee-icon {
-    background-color: var(--color-accent);
-    box-shadow: 0 0 10px var(--color-accent);
+    background-color: #0f766e;
+    box-shadow: 0 0 10px rgba(15, 118, 110, 0.45);
 }
 
 .guarantee-item h4 {
@@ -2290,20 +2322,21 @@ select.form-input {
         top: 80px;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        height: calc(100vh - 80px);
+        background: #ffffff;
         border-bottom: 1px solid var(--border-subtle);
         display: flex !important;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
         gap: 0;
-        padding: 24px 0;
+        padding: 16px 24px 32px;
         z-index: 1000;
+        overflow-y: auto;
         transform: translateY(-120%);
         opacity: 0;
         visibility: hidden;
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.25s;
     }
     
     .nav-menu.active {
@@ -2319,18 +2352,23 @@ select.form-input {
     
     .nav-menu li a {
         display: block;
-        padding: 16px 0;
-        font-size: 1.1rem;
+        padding: 15px 0;
+        font-size: 1.08rem;
         font-weight: 600;
         width: 100%;
         color: var(--text-white);
-        border-bottom: 1px solid rgba(15, 23, 42, 0.03);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.05);
         transition: var(--transition-fast);
     }
+
+    .nav-menu li a::after {
+        display: none !important;
+    }
     
+    .nav-menu li a.active,
     .nav-menu li a:hover {
         color: var(--color-primary);
-        background: rgba(13, 148, 136, 0.03);
+        background: rgba(13, 148, 136, 0.04);
     }
     
     .nav-menu li:last-child a {
@@ -2660,6 +2698,9 @@ select.form-input {
 }
 
 .calc-trust-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-size: 0.78rem;
     font-weight: 600;
     color: var(--text-gray);
@@ -2668,6 +2709,10 @@ select.form-input {
 
 .modal-trust-reassurance {
     margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     text-align: center;
     font-size: 0.78rem;
     font-weight: 600;

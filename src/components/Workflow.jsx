@@ -91,15 +91,15 @@ export default function Workflow() {
 
                 <div className="workflow-footer-reassurance">
                     <div className="workflow-reassurance-item">
-                        <span className="reassurance-icon">⚡</span>
+                        <svg className="reassurance-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                         <span>Akár 48 órás szállítási garancia</span>
                     </div>
                     <div className="workflow-reassurance-item">
-                        <span className="reassurance-icon">🔒</span>
+                        <svg className="reassurance-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                         <span>0 Ft kötelező havidíj, 100% saját tulajdon</span>
                     </div>
                     <div className="workflow-reassurance-item">
-                        <span className="reassurance-icon">🤝</span>
+                        <svg className="reassurance-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         <span>Személyes figyelem, közvetlen kapcsolat</span>
                     </div>
                 </div>

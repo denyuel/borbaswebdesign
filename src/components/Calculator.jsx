@@ -446,8 +446,14 @@ export default function Calculator({ onCtaClick }) {
                                 Kérem a kalkulációt &amp; visszahívást <span className="arrow">→</span>
                             </button>
                             <div className="calc-trust-reassurance">
-                                <span className="calc-trust-item">🔒 100% ingyenes &amp; kötelezettségmentes</span>
-                                <span className="calc-trust-item">⚡ 24 órán belül visszahívlak</span>
+                                <span className="calc-trust-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                    100% ingyenes &amp; kötelezettségmentes
+                                </span>
+                                <span className="calc-trust-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                    24 órán belül visszahívlak
+                                </span>
                             </div>
                         </div>
                     </div>

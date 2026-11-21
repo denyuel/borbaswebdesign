@@ -7,7 +7,7 @@ const faqItems = [
     },
     {
         q: "Mennyi idő alatt készül el a honlapom?",
-        a: "Maximum 2 nap alatt! A 48 órás határidő onnantól ketyeg, hogy átadtál nekem minden szükséges alapanyagot: a végleges szövegeket, képeket, a logódat, a dizájn elképzeléseidet/színpreferenciáidat és a tárhely/domain hozzáféréseket. Ha ezek megvannak, nincs hetekig tartó huzavona, 2 nap múlva éles a weboldalad!"
+        a: "Maximum 2 nap alatt! Nem kell heteket szövegírással töltened: egy rövid, 15 perces egyeztetés alapján összeállítom az oldal szerkezetét és szövegezését, a jóváhagyásodtól számított 48 órán belül pedig élesítve átadom a kész weboldalad!"
     },
     {
         q: "Segítesz a domain és a tárhely intézésében?",

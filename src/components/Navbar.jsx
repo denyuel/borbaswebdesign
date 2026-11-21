@@ -1,38 +1,79 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
 
+const NAV_ITEMS = [
+    { id: 'hero', label: 'Főoldal' },
+    { id: 'rolam', label: 'Rólam' },
+    { id: 'szolgaltatasok', label: 'Szolgáltatások' },
+    { id: 'referenciak', label: 'Referenciák' },
+    { id: 'folyamat', label: 'Folyamat' },
+    { id: 'kalkulator', label: 'Árkalkulátor' },
+    { id: 'gyik', label: 'GYIK' }
+];
+
 export default function Navbar({ onContactClick }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('hero');
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
+            setIsScrolled(window.scrollY > 50);
+
+            const scrollPos = window.scrollY + 140;
+            let current = 'hero';
+            for (const item of NAV_ITEMS) {
+                const el = document.getElementById(item.id);
+                if (el && el.offsetTop <= scrollPos) {
+                    current = item.id;
+                }
             }
+            setActiveSection(current);
         };
+
         window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMobileMenuOpen]);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(prev => !prev);
     };
 
+    const handleNavClick = (id) => {
+        setActiveSection(id);
+        setIsMobileMenuOpen(false);
+    };
+
     return (
-        <header className={`header ${isScrolled ? 'scrolled' : ''}`} id="header">
+        <header className={`header ${isScrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'menu-open' : ''}`} id="header">
             <div className="container nav-container">
                 <Logo id="logo-link" />
                 
                 <nav>
                     <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-                        <li><a href="#hero" className="nav-link active" onClick={() => setIsMobileMenuOpen(false)}>Főoldal</a></li>
-                        <li><a href="#szolgaltatasok" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Szolgáltatások</a></li>
-                        <li><a href="#referenciak" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Referenciák</a></li>
-                        <li><a href="#folyamat" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Hogyan dolgozom?</a></li>
-                        <li><a href="#kalkulator" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Árkalkulátor</a></li>
+                        {NAV_ITEMS.map(item => (
+                            <li key={item.id}>
+                                <a
+                                    href={`#${item.id}`}
+                                    className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+                                    onClick={() => handleNavClick(item.id)}
+                                >
+                                    {item.label}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
                 

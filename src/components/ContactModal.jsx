@@ -154,7 +154,8 @@ export default function ContactModal({ isOpen, onClose, defaultProject, defaultM
                                 {isSubmitting ? 'Küldés folyamatban...' : <>Ingyenes ajánlatkérés küldése <span className="arrow">→</span></>}
                             </button>
                             <div className="modal-trust-reassurance">
-                                <span>🔒 100% ingyenes &amp; kötelezettségmentes • 24 órán belül visszahívlak</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                <span>100% ingyenes &amp; kötelezettségmentes • 24 órán belül visszahívlak</span>
                             </div>
                         </form>
                     </div>

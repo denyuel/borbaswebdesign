@@ -11,7 +11,9 @@ export default function AboutSection() {
                     <p>Minden honlapot kézzel programozok, így az pontosan olyan gyors, biztonságos és egyedi lesz, mint amilyen a szalonod vagy a szolgáltatásod.</p>
                     
                     <div className="support-highlight-box">
-                        <div className="support-highlight-icon">✨</div>
+                        <div className="support-highlight-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
                         <div className="support-highlight-text">
                             <strong>Átadás után sem engedem el a kezed:</strong> Nem tűnök el a közös munka végeztével. Bármikor közvetlenül elérsz telefonon vagy e-mailben, ha frissíteni szeretnéd az áraidat, új képeket töltenél fel, vagy bővítenéd a honlapod.
                         </div>
@@ -22,7 +24,7 @@ export default function AboutSection() {
                             <span className="guarantee-icon"></span>
                             <div>
                                 <h4>48 órás expressz átadás</h4>
-                                <p>Amint átadod a végleges szövegeket, képeket, a logódat és a dizájn elképzeléseidet, 2 napon (48 órán) belül élesítem a weboldalad.</p>
+                                <p>Egy rövid, 15 perces egyeztetés után átvállalom a vázlatot és a szövegírást is – a jóváhagyásodtól számított 48 órán belül élesítem a weboldalad.</p>
                             </div>
                         </div>
                         <div className="guarantee-item">
