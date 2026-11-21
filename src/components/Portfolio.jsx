@@ -51,7 +51,6 @@ const projects = [
 export default function Portfolio({ onContactClick }) {
     const [currentIndex, setCurrentIndex] = useState(5);
     const [useTransition, setUseTransition] = useState(true);
-    const [activeDrawer, setActiveDrawer] = useState(null); // stores active card index
     const touchStart = React.useRef(0);
     const touchEnd = React.useRef(0);
 
@@ -153,58 +152,30 @@ export default function Portfolio({ onContactClick }) {
                             >
                                 <div className="portfolio-image-wrap">
                                     <img src={project.img} alt={project.title} className="portfolio-img" />
-                                    
-                                    <div className={`portfolio-details-drawer ${activeDrawer === idx ? 'active' : ''}`}>
+                                </div>
+                                <div className="portfolio-card-body">
+                                    <span className="portfolio-badge">{project.badge}</span>
+                                    <span className="portfolio-category">{project.category}</span>
+                                    <h4>{project.title}</h4>
+                                    <p>{project.desc}</p>
+                                    <div className="portfolio-drawer-actions">
+                                        {project.url && (
+                                            <a 
+                                                href={project.url} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer" 
+                                                className="btn-primary" 
+                                            >
+                                                Megtekintés &rarr;
+                                            </a>
+                                        )}
                                         <button 
-                                            className="drawer-close-btn"
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                setActiveDrawer(null);
-                                            }}
+                                            className="btn-secondary" 
+                                            onClick={() => onContactClick(project.title)}
                                         >
-                                            &times;
+                                            Ajánlatkérés &rarr;
                                         </button>
-                                        <div className="drawer-content">
-                                            <span className="portfolio-badge">{project.badge}</span>
-                                            <span className="portfolio-category">{project.category}</span>
-                                            <h4>{project.title}</h4>
-                                            <p>{project.desc}</p>
-                                            <div className="portfolio-drawer-actions">
-                                                {project.url && (
-                                                    <a 
-                                                        href={project.url} 
-                                                        target="_blank" 
-                                                        rel="noopener noreferrer" 
-                                                        className="btn-primary" 
-                                                    >
-                                                        Megtekintés &rarr;
-                                                    </a>
-                                                )}
-                                                <button 
-                                                    className="btn-secondary" 
-                                                    onClick={() => onContactClick(project.title)}
-                                                >
-                                                    Ajánlatkérés &rarr;
-                                                </button>
-                                            </div>
-                                        </div>
                                     </div>
-                                    
-                                    <button 
-                                        className="portfolio-card-toggle"
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            setActiveDrawer(activeDrawer === idx ? null : idx);
-                                        }}
-                                        type="button"
-                                    >
-                                        <span className="toggle-text" style={{ pointerEvents: 'none' }}>
-                                            {activeDrawer === idx ? 'Bezárás' : 'Részletek'}
-                                        </span>
-                                        <span className="toggle-icon" style={{ pointerEvents: 'none' }}>
-                                            {activeDrawer === idx ? '−' : '+'}
-                                        </span>
-                                    </button>
                                 </div>
                             </div>
                         ))}

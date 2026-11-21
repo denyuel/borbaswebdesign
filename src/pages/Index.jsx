@@ -7,6 +7,7 @@ import Portfolio from '../components/Portfolio';
 import Workflow from '../components/Workflow';
 import Calculator from '../components/Calculator';
 import Faq from '../components/Faq';
+import ClosingCta from '../components/ClosingCta';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 
@@ -65,6 +66,7 @@ export default function Index() {
                 <Workflow />
                 <Calculator onCtaClick={(type, msg) => openContact(type, msg)} />
                 <Faq />
+                <ClosingCta onContactClick={(type, msg) => openContact(type, msg)} />
             </main>
             
             <Footer />

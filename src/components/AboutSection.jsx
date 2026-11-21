@@ -41,8 +41,19 @@ export default function AboutSection() {
                         </div>
                     </div>
                 </div>
-                <div className="rolam-image-wrap">
-                    <img src="/daniel-portrait.jpg?v=79" alt="Borbás Dániel - Borbás Webdesign" className="rolam-img" />
+                <div className="rolam-visual-col">
+                    <div className="rolam-image-wrap">
+                        <img src="/daniel-portrait.jpg?v=79" alt="Borbás Dániel - Borbás Webdesign" className="rolam-img" />
+                    </div>
+                    <div className="rolam-signature-card">
+                        <div className="rolam-sig-info">
+                            <strong>Borbás Dániel</strong>
+                            <span>Egyéni vállalkozó • Szeged &amp; Országosan</span>
+                        </div>
+                        <a href="mailto:daniel.borbas@borbaswebdesign.hu" className="rolam-sig-link">
+                            Üzenet írása →
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
