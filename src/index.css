@@ -262,17 +262,17 @@ button {
     left: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-subtle);
     transition: var(--transition-smooth);
 }
 
 .header.scrolled {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid var(--border-subtle);
-    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
 }
 
 .nav-container {
@@ -2151,15 +2151,22 @@ select.form-input {
     }
     
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        letter-spacing: 0.05em;
     }
     
     .hero p {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
     
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
+    }
+
+    .badge {
+        font-size: 0.74rem;
+        padding: 6px 14px;
+        letter-spacing: 0.08em;
     }
     
     .hero-actions {
@@ -2173,6 +2180,27 @@ select.form-input {
         max-width: 280px;
         justify-content: center;
     }
+
+    .services-grid {
+        gap: 20px;
+    }
+
+    .service-card-content {
+        padding: 22px 18px;
+        gap: 12px;
+    }
+
+    .service-card-content .card-icon {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 6px;
+        border-radius: 12px;
+    }
+
+    .service-benefit-tag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
     
     .workflow-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -2180,13 +2208,46 @@ select.form-input {
     }
     
     .workflow-card {
-        padding: 20px 16px;
+        padding: 18px 16px;
+    }
+
+    .workflow-card-top {
+        margin-bottom: 10px;
+    }
+
+    .workflow-step-num {
+        font-size: 1.45rem;
+    }
+
+    .workflow-icon-box {
+        width: 36px;
+        height: 36px;
+    }
+
+    .workflow-badge-pill {
+        margin-bottom: 8px;
+        font-size: 0.68rem;
+    }
+
+    .workflow-card-heading {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+
+    .workflow-card-text {
+        font-size: 0.84rem;
+        line-height: 1.45;
+    }
+
+    .workflow-card-progress {
+        margin-top: 14px;
     }
     
     .workflow-footer-reassurance {
         flex-direction: column;
-        gap: 12px;
-        padding: 16px 20px;
+        gap: 10px;
+        padding: 14px 18px;
+        margin-top: 24px;
         border-radius: var(--radius-lg);
     }
     
@@ -2194,6 +2255,11 @@ select.form-input {
         flex-direction: column;
         gap: 24px;
         text-align: center;
+    }
+
+    .footer-logo p {
+        font-size: 0.82rem !important;
+        padding: 0 12px;
     }
     
     /* Portfolio mobile layout: make details always visible below the image */
@@ -2222,7 +2288,7 @@ select.form-input {
         visibility: visible !important;
         pointer-events: auto !important;
         background: #ffffff !important;
-        padding: 24px !important;
+        padding: 20px !important;
         transform: none !important;
         justify-content: flex-start !important;
         height: auto !important;
@@ -2256,14 +2322,19 @@ select.form-input {
     }
     
     .portfolio-details-drawer h4 {
-        font-size: 1.25rem !important;
+        font-size: 1.2rem !important;
         margin-top: 4px;
         color: #0f172a !important;
     }
 
     .portfolio-details-drawer p {
-        margin-bottom: 16px !important;
+        margin-bottom: 14px !important;
         color: var(--text-gray) !important;
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+        overflow: visible !important;
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
     }
 
     .portfolio-details-drawer .portfolio-drawer-actions {
@@ -2291,11 +2362,14 @@ select.form-input {
 /* Mobile responsive fixes for the calculator and grids */
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.58rem;
+        line-height: 1.28;
+        letter-spacing: 0.04em;
     }
     
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.48rem;
+        letter-spacing: 0.1em;
     }
     
     .logo-img {
@@ -2318,17 +2392,20 @@ select.form-input {
 
     .workflow-grid {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
+    }
+
+    .workflow-card {
+        padding: 16px;
     }
     
     .footer-contact-wrap {
         display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
+        flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 8px !important;
-        width: auto !important;
+        gap: 10px !important;
+        width: 100% !important;
     }
 
     .social-links {
@@ -2336,9 +2413,11 @@ select.form-input {
         flex-direction: row !important;
         justify-content: center !important;
         align-items: center !important;
-        flex-wrap: nowrap !important;
-        width: auto !important;
-        gap: 8px !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        max-width: 290px !important;
+        margin: 0 auto !important;
+        gap: 10px !important;
     }
     
     .social-links a.social-link {
@@ -2347,8 +2426,8 @@ select.form-input {
     }
     
     .social-links a.social-link[href^="mailto:"] {
-        font-size: 0.68rem !important;
-        padding: 0 10px !important;
+        font-size: 0.78rem !important;
+        padding: 0 14px !important;
         white-space: nowrap !important;
         text-align: center !important;
         height: 40px !important;
@@ -2365,7 +2444,7 @@ select.form-input {
     }
     
     .calculator-container {
-        padding: 24px 16px;
+        padding: 20px 14px;
     }
     
     .calc-card {
@@ -2385,6 +2464,12 @@ select.form-input {
         font-size: 1.1rem;
     }
 
+    .calc-submit-btn {
+        font-size: 0.9rem !important;
+        padding: 14px 16px !important;
+        white-space: nowrap !important;
+    }
+
     .calc-summary-panel {
         overflow: visible !important;
         height: auto !important;
@@ -2396,10 +2481,17 @@ select.form-input {
     }
 }
 
-@media (max-width: 360px) {
-    .footer-contact-wrap {
-        flex-direction: column !important;
-        gap: 8px !important;
+@media (max-width: 375px) {
+    .hero h1 {
+        font-size: 1.44rem;
+        letter-spacing: 0.03em;
+    }
+    .calc-submit-btn {
+        font-size: 0.82rem !important;
+        padding: 13px 12px !important;
+    }
+    .social-links a.social-link[href^="mailto:"] {
+        font-size: 0.72rem !important;
     }
 }
 

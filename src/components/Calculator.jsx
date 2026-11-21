@@ -65,21 +65,38 @@ export default function Calculator({ onCtaClick }) {
 
     const [displayPrice, setDisplayPrice] = useState(150000);
     const [isStickyVisible, setIsStickyVisible] = useState(false);
+    const [isCtaVisible, setIsCtaVisible] = useState(false);
     const calcRef = useRef(null);
+    const ctaRef = useRef(null);
 
     useEffect(() => {
         const el = calcRef.current;
+        const ctaEl = ctaRef.current;
         if (!el || typeof IntersectionObserver === 'undefined') return;
 
-        const observer = new IntersectionObserver(
+        const calcObserver = new IntersectionObserver(
             ([entry]) => {
                 setIsStickyVisible(entry.isIntersecting);
             },
             { threshold: 0.08 }
         );
+        calcObserver.observe(el);
 
-        observer.observe(el);
-        return () => observer.disconnect();
+        let ctaObserver = null;
+        if (ctaEl) {
+            ctaObserver = new IntersectionObserver(
+                ([entry]) => {
+                    setIsCtaVisible(entry.isIntersecting);
+                },
+                { threshold: 0.1 }
+            );
+            ctaObserver.observe(ctaEl);
+        }
+
+        return () => {
+            calcObserver.disconnect();
+            if (ctaObserver) ctaObserver.disconnect();
+        };
     }, []);
 
     const targetPrice = basePrices[selectedType] + 
@@ -420,6 +437,7 @@ export default function Calculator({ onCtaClick }) {
                             </ul>
                             
                             <button 
+                                ref={ctaRef}
                                 className="btn-primary calc-submit-btn" 
                                 id="calc-cta-btn" 
                                 style={{ width: '100%', justifyContent: 'center' }}
@@ -439,7 +457,7 @@ export default function Calculator({ onCtaClick }) {
             <CalculatorStickyBar 
                 displayPrice={displayPrice}
                 onCtaClick={handleCalculatorSubmit}
-                isVisible={isStickyVisible}
+                isVisible={isStickyVisible && !isCtaVisible}
             />
         </section>
     );
