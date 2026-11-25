@@ -45,11 +45,30 @@ const projects = [
         title: 'Százszorszép Kozmetika',
         desc: 'Elegáns szépségszalon weboldala beépített online naptárral és interaktív kezelési katalógussal.',
         url: 'https://szazszorszep-kozmetika.hu'
+    },
+    {
+        id: 'szertartasmester',
+        img: '/portfolio-szertartasmester.png?v=1',
+        badge: 'Esküvői arculat & ajánlatkérés',
+        category: 'Szertartásvezetői Weboldal',
+        title: 'Szertartásmester',
+        desc: 'Prémium, személyre szabott esküvői szertartásvezetői bemutatkozó oldal interaktív csomagokkal, referenciákkal és blogrendszerrel.',
+        url: 'https://szertartasmester.hu'
+    },
+    {
+        id: 'vegsobucsu',
+        img: '/portfolio-vegsobucsu.png?v=1',
+        badge: 'Személyre szabott búcsúztatás',
+        category: 'Polgári búcsúztató Weboldal',
+        title: 'Végső Búcsú',
+        desc: 'Méltóságteljes, empatikus hangvételű polgári búcsúztatói weboldal egyedi történetekkel, blogrendszerrel és közvetlen kapcsolatfelvétellel.',
+        url: 'https://vegsobucsu.hu'
     }
 ];
 
 export default function Portfolio({ onContactClick }) {
-    const [currentIndex, setCurrentIndex] = useState(5);
+    const totalProjects = projects.length;
+    const [currentIndex, setCurrentIndex] = useState(totalProjects);
     const [useTransition, setUseTransition] = useState(true);
     const touchStart = React.useRef(0);
     const touchEnd = React.useRef(0);
@@ -86,12 +105,12 @@ export default function Portfolio({ onContactClick }) {
 
     const handleTransitionEnd = (e) => {
         if (e.target !== e.currentTarget) return; // ignore bubbled transitionend events from drawers or images
-        if (currentIndex < 5) {
+        if (currentIndex < totalProjects) {
             setUseTransition(false);
-            setCurrentIndex(currentIndex + 5);
-        } else if (currentIndex >= 10) {
+            setCurrentIndex(currentIndex + totalProjects);
+        } else if (currentIndex >= totalProjects * 2) {
             setUseTransition(false);
-            setCurrentIndex(currentIndex - 5);
+            setCurrentIndex(currentIndex - totalProjects);
         }
     };
 
@@ -107,7 +126,7 @@ export default function Portfolio({ onContactClick }) {
 
     const handleDotClick = (index) => {
         if (!useTransition) return;
-        setCurrentIndex(index + 5);
+        setCurrentIndex(index + totalProjects);
     };
 
     // Padded list for infinite carousel (fully pad with a complete set on left and right)
@@ -117,7 +136,7 @@ export default function Portfolio({ onContactClick }) {
         ...projects
     ];
 
-    const activeDotIndex = (currentIndex - 5 + 5) % 5;
+    const activeDotIndex = ((currentIndex % totalProjects) + totalProjects) % totalProjects;
 
     return (
         <section className="section-padding" id="referenciak">
