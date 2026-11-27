@@ -2,6 +2,33 @@ import React, { useState, useEffect } from 'react';
 
 const projects = [
     {
+        id: 'funkcionalistest',
+        img: '/portfolio-funkcionalistest.png?v=1',
+        badge: 'Craniosacralis & Rehabilitáció',
+        category: 'Egészség & Terápiás Weboldal',
+        title: 'FunkcionálisTest',
+        desc: 'Prémium terápiás és rehabilitációs weboldal Craniosacralis kezelésekkel, Balance² mozgással és online időpontfoglalással.',
+        url: 'https://funkcionalistest.hu'
+    },
+    {
+        id: 'vegsobucsu',
+        img: '/portfolio-vegsobucsu.png?v=1',
+        badge: 'Személyre szabott búcsúztatás',
+        category: 'Polgári búcsúztató Weboldal',
+        title: 'Végső Búcsú',
+        desc: 'Méltóságteljes, empatikus hangvételű polgári búcsúztatói weboldal egyedi történetekkel, blogrendszerrel és közvetlen kapcsolatfelvétellel.',
+        url: 'https://vegsobucsu.hu'
+    },
+    {
+        id: 'szertartasmester',
+        img: '/portfolio-szertartasmester.png?v=1',
+        badge: 'Esküvői arculat & ajánlatkérés',
+        category: 'Szertartásvezetői Weboldal',
+        title: 'Szertartásmester',
+        desc: 'Prémium, személyre szabott esküvői szertartásvezetői bemutatkozó oldal interaktív csomagokkal, referenciákkal és blogrendszerrel.',
+        url: 'https://szertartasmester.hu'
+    },
+    {
         id: 'winery',
         img: '/portfolio-winery.png?v=3',
         badge: 'Egyedi design & borkatalógus',
@@ -20,15 +47,6 @@ const projects = [
         url: 'https://vineroof.hu'
     },
     {
-        id: 'funkcionalistest',
-        img: '/portfolio-funkcionalistest.png?v=1',
-        badge: 'Craniosacralis & Rehabilitáció',
-        category: 'Egészség & Terápiás Weboldal',
-        title: 'FunkcionálisTest',
-        desc: 'Prémium terápiás és rehabilitációs weboldal Craniosacralis kezelésekkel, Balance² mozgással és online időpontfoglalással.',
-        url: 'https://funkcionalistest.hu'
-    },
-    {
         id: 'farm',
         img: '/portfolio-farm.png?v=3',
         badge: 'Egyedi kalkulátor integráció',
@@ -45,24 +63,6 @@ const projects = [
         title: 'Százszorszép Kozmetika',
         desc: 'Elegáns szépségszalon weboldala beépített online naptárral és interaktív kezelési katalógussal.',
         url: 'https://szazszorszep-kozmetika.hu'
-    },
-    {
-        id: 'szertartasmester',
-        img: '/portfolio-szertartasmester.png?v=1',
-        badge: 'Esküvői arculat & ajánlatkérés',
-        category: 'Szertartásvezetői Weboldal',
-        title: 'Szertartásmester',
-        desc: 'Prémium, személyre szabott esküvői szertartásvezetői bemutatkozó oldal interaktív csomagokkal, referenciákkal és blogrendszerrel.',
-        url: 'https://szertartasmester.hu'
-    },
-    {
-        id: 'vegsobucsu',
-        img: '/portfolio-vegsobucsu.png?v=1',
-        badge: 'Személyre szabott búcsúztatás',
-        category: 'Polgári búcsúztató Weboldal',
-        title: 'Végső Búcsú',
-        desc: 'Méltóságteljes, empatikus hangvételű polgári búcsúztatói weboldal egyedi történetekkel, blogrendszerrel és közvetlen kapcsolatfelvétellel.',
-        url: 'https://vegsobucsu.hu'
     }
 ];
 
